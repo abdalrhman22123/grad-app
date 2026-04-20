@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monitors Menu — OTOVISION</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="monitors.css" />
+  </head>
+  <body>
+    <main class="mm-page">
+      <header class="mm-head">
+        <a class="mm-back" href="dashboard.html" aria-label="Back">←</a>
+        <div>
+          <p class="mm-kicker">Vehicle Diagnostics</p>
+          <h1 class="mm-title">Monitors Menu</h1>
+        </div>
+      </header>
+
+      <section class="mm-grid" aria-label="Monitor pages">
+        <a class="mm-card" href="oil-monitor.html">
+          <span class="mm-icon">🛢</span>
+          <h2>Oil Monitor</h2>
+          <p>Health, viscosity, service records</p>
+        </a>
+        <a class="mm-card" href="engine-health.html">
+          <span class="mm-icon">🧰</span>
+          <h2>Engine Health</h2>
+          <p>Status, oil-change timing, service alert</p>
+        </a>
+        <a class="mm-card" href="fuel-monitor.html">
+          <span class="mm-icon">⛽</span>
+          <h2>Fuel Monitor</h2>
+          <p>Tank level, usage, refill history</p>
+        </a>
+        <a class="mm-card" href="tire-monitor.html">
+          <span class="mm-icon">⚙</span>
+          <h2>Tires Monitor</h2>
+          <p>Pressure, tread depth, TPMS alerts</p>
+        </a>
+      </section>
+    </main>
+
+    <script src="i18n-ar.js"></script>
+    <script src="lang-toggle.js"></script>
+    <script src="monitors.js"></script>
+  </body>
+</html>

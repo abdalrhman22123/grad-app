@@ -1,0 +1,65 @@
+:root {
+  --bg: #0a0a0b;
+  --card: #17181d;
+  --text: #fff;
+  --muted: #9ca3af;
+  --accent: #3b82f6;
+  --border: rgba(255, 255, 255, 0.08);
+}
+*,
+*::before,
+*::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+.mm-page {
+  max-width: min(100%, 700px);
+  margin: 0 auto;
+  padding: clamp(16px, 3vw, 24px);
+}
+.mm-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.mm-back {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  font-weight: 700;
+}
+.mm-kicker { margin: 0; color: var(--muted); font-size: .82rem; }
+.mm-title { margin: 4px 0 0; font-size: clamp(1.4rem, 4vw, 2rem); }
+.mm-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.mm-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  text-decoration: none;
+  color: inherit;
+  min-height: 180px;
+}
+.mm-card:hover { border-color: rgba(59, 130, 246, 0.5); }
+.mm-icon { font-size: 1.5rem; }
+.mm-card h2 { margin: 12px 0 6px; font-size: 1.05rem; }
+.mm-card p { margin: 0; color: var(--muted); font-size: .82rem; line-height: 1.45; }
+@media (max-width: 900px) {
+  .mm-grid { grid-template-columns: 1fr; }
+  .mm-card { min-height: auto; }
+}
