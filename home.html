@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTOVISION — Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <div class="app" id="app">
+      <div class="app__inner">
+        <header class="app-header">
+          <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navPanel" aria-label="Open menu">
+            <span class="menu-line menu-line--long" aria-hidden="true"></span>
+            <span class="menu-line menu-line--short" aria-hidden="true"></span>
+          </button>
+          <p class="app-logo" lang="en">OTOVISION</p>
+          <a href="#" class="profile-link" id="profileLink" aria-label="Profile">
+            <img class="profile-avatar" src="images/profile-avatar.svg" width="40" height="40" alt="" />
+          </a>
+        </header>
+
+        <main class="app-main">
+          <div class="hero" id="heroBlock">
+            <img
+              class="hero__img"
+              src="images/car.svg"
+              width="1200"
+              height="1000"
+              alt="Top-down view of your vehicle"
+            />
+          </div>
+
+          <section class="greeting" aria-label="Greeting">
+            <p class="greeting__hello">Hello</p>
+            <h1 class="greeting__name" id="userName">Mohamed</h1>
+            <p class="greeting__action" id="actionLabel">Unlock your car</p>
+          </section>
+        </main>
+      </div>
+
+      <div class="nav-panel" id="navPanel" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="nav-panel__backdrop" id="navBackdrop" tabindex="-1"></div>
+        <nav class="nav-panel__sheet" aria-label="Main menu">
+          <button type="button" class="nav-panel__close" id="navClose" aria-label="Close menu">&times;</button>
+          <ul class="nav-panel__list">
+            <li><a href="dashboard.html">Home</a></li>
+            <li><a href="login.html">Sign in</a></li>
+            <li><a href="monitors.html">Monitors Menu</a></li>
+            <li><a href="radio.html">Radio</a></li>
+            <li><a href="bluetooth.html">Bluetooth</a></li>
+            <li><a href="ar-history.html">AR History</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="login.html" class="menu-logout">Log out</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <footer class="app-footer">
+        <div class="app-footer__top">
+          <svg class="app-footer__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 56" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path fill="#5d626a" d="M0,56 L0,32 Q200,4 400,32 L400,56 Z" />
+          </svg>
+          <button type="button" class="unlock-btn is-locked" id="unlockBtn" aria-pressed="false" aria-label="Unlock vehicle">
+            <svg class="icon-lock icon-lock--locked" id="iconLocked" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true">
+              <rect x="14" y="22" width="20" height="18" rx="2" fill="#3c3c3c" />
+              <path
+                d="M16 22 V18 C16 12.5 20.5 8 24 8 C27.5 8 32 12.5 32 18 V22"
+                fill="none"
+                stroke="#3c3c3c"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+              <circle cx="24" cy="31" r="2.5" fill="#ffffff" />
+            </svg>
+            <svg class="icon-lock icon-lock--unlocked" id="iconUnlocked" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true">
+              <rect x="14" y="22" width="20" height="18" rx="2" fill="#3c3c3c" />
+              <path
+                d="M32 22 V14 C32 9 28.5 6 24 6 C19.5 6 16 9 16 14"
+                fill="none"
+                stroke="#3c3c3c"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+              <circle cx="24" cy="31" r="2.5" fill="#ffffff" />
+            </svg>
+          </button>
+        </div>
+        <div class="app-footer__bar" aria-hidden="true"></div>
+      </footer>
+    </div>
+
+    <script src="i18n-ar.js"></script>
+    <script src="lang-toggle.js"></script>
+    <script src="home.js"></script>
+    <script src="nav-animations.js"></script>
+  </body>
+</html>
