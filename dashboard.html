@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTOVISION — VW Tiguan 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="dashboard" id="dashboard">
+      <header class="dash-header">
+        <div class="dash-header__copy">
+          <p class="dash-kicker">Ready to have a ride today?</p>
+          <h1 class="dash-title">VW Tiguan 2025</h1>
+        </div>
+        <button type="button" class="icon-btn menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <span class="menu-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </header>
+
+      <div class="menu-drawer" id="menuDrawer" aria-hidden="true">
+        <div class="menu-drawer__backdrop" id="menuBackdrop"></div>
+        <nav class="menu-drawer__panel" aria-label="Quick links">
+          <button type="button" class="menu-drawer__close" id="menuClose" aria-label="Close menu">&times;</button>
+          <ul class="menu-drawer__list">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="login.html">Sign in</a></li>
+            <li><a href="monitors.html">Monitors Menu</a></li>
+            <li><a href="radio.html">Radio</a></li>
+            <li><a href="bluetooth.html">Bluetooth</a></li>
+            <li><a href="ar-history.html">AR History</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="login.html" class="menu-logout">Log out</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <main class="dash-main" id="main">
+        <!-- <section class="card hero-wire" id="heroWire" aria-label="Vehicle preview"> -->
+          <div class="hero-wire__glow" aria-hidden="true"></div>
+          <img
+            class="hero-wire__img"
+            id="heroWireImg"
+            src="images/car-Photoroom (1) 1.svg"
+            alt="Wireframe vehicle visualization"
+          />
+          <div class="hero-wire__fallback" aria-hidden="true">
+            <svg viewBox="0 0 360 200" class="hero-wire__svg" focusable="false">
+              <path
+                fill="none"
+                stroke="#38bdf8"
+                stroke-width="1.8"
+                d="M60 140 L40 120 L42 95 L55 78 L120 62 L180 58 L240 62 L305 78 L318 95 L320 120 L300 140 L280 148 L80 148 Z M120 62 Q180 48 240 62 M100 95 L260 95 M115 120 L245 120 M180 58 L180 148"
+              />
+            </svg>
+          </div>
+        </section>
+
+        <section class="card location-card" aria-labelledby="locHeading">
+          <div class="location-card__grid">
+            <div class="location-card__info">
+              <h2 class="card-heading" id="locHeading">Your Location</h2>
+              <div class="gas-block">
+                <div class="gas-block__row">
+                  <span class="gas-block__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                      <path d="M6 22V8a2 2 0 012-2h5v-1a1 1 0 011-1h1a1 1 0 011 1v1h1v6" stroke="currentColor" stroke-width="1.6" />
+                      <path d="M6 8h8v14H6V8z" stroke="currentColor" stroke-width="1.6" />
+                      <path d="M9 12h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                  <span class="gas-block__label">Gas Station</span>
+                </div>
+                <p class="gas-block__addr">124 Nile Corniche, Cairo</p>
+                <div class="pill-row">
+                  <button type="button" class="pill pill--primary" id="confirmLoc">Confirm</button>
+                  <button type="button" class="pill pill--ghost" id="cancelLoc">Cancel</button>
+                </div>
+              </div>
+            </div>
+            <div class="map-widget" role="img" aria-label="Map preview with route">
+              <svg class="map-widget__svg" viewBox="0 0 120 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <rect width="120" height="140" rx="14" fill="url(#mapBg)" />
+                <defs>
+                  <linearGradient id="mapBg" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#151820" />
+                    <stop offset="1" stop-color="#0b0d12" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M28 100 Q55 70 60 48 T92 24"
+                  fill="none"
+                  stroke="var(--accent)"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <circle cx="28" cy="100" r="5" fill="var(--accent)" />
+                <circle cx="92" cy="24" r="5" fill="#6ee7b7" />
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        <section class="row-cards" aria-label="Status">
+          <article class="card card--stat">
+            <p class="stat-label">320 KM Remaining</p>
+            <div class="fuel-gauge" role="presentation" aria-hidden="true">
+              <span class="fuel-gauge__seg fuel-gauge__seg--on"></span>
+              <span class="fuel-gauge__seg fuel-gauge__seg--on"></span>
+              <span class="fuel-gauge__seg fuel-gauge__seg--on"></span>
+              <span class="fuel-gauge__seg fuel-gauge__seg--on"></span>
+              <span class="fuel-gauge__seg fuel-gauge__seg--dim"></span>
+            </div>
+            <p class="stat-big">72.3 <span class="stat-unit">Kmh</span></p>
+            <p class="stat-big stat-big--secondary">272 Km</p>
+          </article>
+          <article class="card card--stat">
+            <p class="weather-loc">Cairo, Egypt</p>
+            <div class="weather-top">
+              <span class="weather-icon" aria-hidden="true">⛅</span>
+              <span class="weather-temp">23°C</span>
+            </div>
+            <p class="weather-range">Day 26°C — Night 15°C</p>
+            <div class="lock-strip">
+              <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true">
+                <rect x="5" y="9" width="10" height="8" rx="1.5" fill="currentColor" />
+                <path d="M6 9V7a4 4 0 118 0v2" fill="none" stroke="currentColor" stroke-width="1.6" />
+              </svg>
+              <span>Unlocked</span>
+            </div>
+          </article>
+        </section>
+
+        <section class="card dest-card" aria-labelledby="destHeading">
+          <h2 class="card-heading" id="destHeading">Destinations</h2>
+          <ul class="dest-list">
+            <li>
+              <span class="dest-list__icon" aria-hidden="true">🏠</span>
+              <div class="dest-list__text">
+                <span class="dest-list__name">Home</span>
+                <span class="dest-list__addr">15 Ramsis St.</span>
+              </div>
+              <button type="button" class="dest-arrow" aria-label="Navigate to Home">→</button>
+            </li>
+            <li>
+              <span class="dest-list__icon" aria-hidden="true">💼</span>
+              <div class="dest-list__text">
+                <span class="dest-list__name">Work</span>
+                <span class="dest-list__addr">Smart Village</span>
+              </div>
+              <button type="button" class="dest-arrow" aria-label="Navigate to Work">→</button>
+            </li>
+            <li>
+              <span class="dest-list__icon" aria-hidden="true">⚡</span>
+              <div class="dest-list__text">
+                <span class="dest-list__name">Supercharger</span>
+                <span class="dest-list__addr">Ring Road East</span>
+              </div>
+              <button type="button" class="dest-arrow" aria-label="Navigate to Supercharger">→</button>
+            </li>
+          </ul>
+        </section>
+
+        <section class="card climate-card" aria-labelledby="climateHeading">
+          <h2 class="card-heading sr-only" id="climateHeading">Climate</h2>
+          <div class="climate-head">
+            <span class="climate-head__icon" aria-hidden="true">🌡️</span>
+            <div>
+              <p class="climate-head__label">Current Temperature</p>
+              <p class="climate-head__value" id="currentTempDisplay">72° F</p>
+            </div>
+          </div>
+          <div class="climate-nest">
+            <div class="climate-control">
+              <button type="button" class="round-ctrl" id="tempMinus" aria-label="Decrease target temperature">−</button>
+              <p class="climate-target"><span id="targetTemp">72</span>°</p>
+              <button type="button" class="round-ctrl" id="tempPlus" aria-label="Increase target temperature">+</button>
+            </div>
+            <div class="slider-wrap">
+              <label class="sr-only" for="tempSlider">Target temperature</label>
+              <input type="range" id="tempSlider" min="60" max="85" value="72" />
+              <div class="slider-labels">
+                <span>60°F</span>
+                <span>85°F</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card vehicle-card" aria-labelledby="vehicleHeading">
+          <h2 class="card-heading" id="vehicleHeading">Vehicle</h2>
+          <div class="vehicle-card__imgwrap">
+            <img class="vehicle-card__img" src="images/car.svg" alt="VW Tiguan" loading="lazy" />
+          </div>
+          <div class="toggle-row">
+            <button type="button" class="status-chip" id="engineChip" aria-pressed="false">
+              <span class="status-chip__label">Engine</span>
+              <span class="status-chip__value" id="engineState">Off</span>
+            </button>
+            <button type="button" class="status-chip" id="securityChip" aria-pressed="true">
+              <span class="status-chip__label">Security</span>
+              <span class="status-chip__value" id="securityState">Locked</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="card system-card" aria-labelledby="sysHeading">
+          <div class="system-card__head">
+            <div>
+              <h2 class="card-heading card-heading--inline" id="sysHeading">
+                <span class="check-badge" aria-hidden="true">✓</span>
+                System Status
+              </h2>
+              <p class="system-excellent">Excellent</p>
+              <p class="system-sub">Oil condition is optimal.</p>
+            </div>
+            <div class="oil-icon" aria-hidden="true">💧</div>
+          </div>
+          <div class="oil-meter">
+            <div class="oil-meter__top">
+              <span>Oil Level: 85%</span>
+            </div>
+            <div class="oil-meter__bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+              <span class="oil-meter__fill" style="width: 85%"></span>
+            </div>
+            <div class="oil-meter__ticks">
+              <span>MIN</span>
+              <span>Normal Range</span>
+              <span>MAX</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card theme-card" aria-labelledby="themeHeading">
+          <h2 class="card-heading" id="themeHeading">Theme</h2>
+          <ul class="theme-list" role="radiogroup" aria-label="App theme">
+            <li>
+              <button type="button" class="theme-option is-selected" role="radio" aria-checked="true" data-theme="dark" id="themeDark">
+                <span class="theme-option__icon" aria-hidden="true">🌙</span>
+                <span class="theme-option__text">
+                  <span class="theme-option__title">Dark Mode</span>
+                  <span class="theme-option__desc">Easier on eyes at night</span>
+                </span>
+                <span class="theme-option__check" aria-hidden="true">✓</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="theme-option" role="radio" aria-checked="false" data-theme="light" id="themeLight">
+                <span class="theme-option__icon" aria-hidden="true">☀️</span>
+                <span class="theme-option__text">
+                  <span class="theme-option__title">Light Mode</span>
+                  <span class="theme-option__desc">Bright interface</span>
+                </span>
+                <span class="theme-option__check" aria-hidden="true">✓</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="theme-option" role="radio" aria-checked="false" data-theme="auto" id="themeAuto">
+                <span class="theme-option__icon" aria-hidden="true">💻</span>
+                <span class="theme-option__text">
+                  <span class="theme-option__title">Auto</span>
+                  <span class="theme-option__desc">Match system setting</span>
+                </span>
+                <span class="theme-option__check" aria-hidden="true">✓</span>
+              </button>
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <nav class="dock" aria-label="Primary">
+        <a href="home.html"><button type="button" class="dock__btn" aria-label="Power"><img src="images/start icon.svg" alt=""></button></a>
+        <a href="car-screen.html"><button type="button" class="dock__btn" aria-label="Messages"><img src="images/carscreen icon.svg" alt=""></button></a>
+        <a href="dashboard.html"><button type="button" class="dock__btn dock__btn--active" aria-current="page" aria-label="Home">
+          <span class="dock__home"><img src="images/home icon.svg" alt=""></span>
+        </button></a>
+        <a href="insights.html"><button type="button" class="dock__btn" aria-label="Statistics"><img src="images/Vector.svg" alt=""></button></a>
+        <a href="profile.html"><button type="button" class="dock__btn dock__btn--avatar" aria-label="Profile">
+          <img src="images/me.svg" width="28" height="28" />
+        </button></a>
+      </nav>
+    </div>
+
+    <script src="i18n-ar.js"></script>
+    <script src="lang-toggle.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="nav-animations.js"></script>
+  </body>
+</html>
