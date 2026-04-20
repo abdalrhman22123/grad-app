@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTOVISION Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <main class="login-page">
+      <div class="page-glow" aria-hidden="true"></div>
+
+      <header class="brand-block" aria-label="OTOVISION">
+        <img class="logo" src="images/logo.svg" alt="OTOVISION logo">
+        <h1 class="brand-name">OTOVISION</h1>
+      </header>
+
+      <section class="login-card" aria-label="Sign in form">
+        <form id="loginForm" class="login-form">
+          <div class="copy">
+            <h2>Welcome back !</h2>
+            <p>Please enter your details</p>
+          </div>
+
+          <label class="sr-only" for="email">Email ID</label>
+          <input id="email" name="email" type="email" placeholder="Email ID" autocomplete="email" required />
+
+          <label class="sr-only" for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Password"
+            autocomplete="current-password"
+            required
+          />
+
+          <div class="form-row">
+            <label class="remember-wrap" for="remember">
+              <input id="remember" name="remember" type="checkbox" />
+              <span>Remember Me</span>
+            </label>
+            <a href="#" class="text-link" id="forgotPassword">Forget Password?</a>
+          </div>
+
+          <a href="dashboard.html"><button class="primary-button">Sign In</button></a>
+          <p class="signup-text">
+            <span>Don't have account</span>
+            <a href="signup.html"><span class="text-link strong" id="signUpLink">Sign up</span></a>
+          </p>
+
+          <div class="social-list">
+            <button class="social-button" id="googleButton" type="button">
+              <span class="social-icon google">G</span>
+              <span>Sign in with Google</span>
+            </button>
+            <button class="social-button" id="facebookButton" type="button">
+              <span class="social-icon facebook">f</span>
+              <span>Sign in with Facebook</span>
+            </button>
+            <button class="social-button" id="appleButton" type="button">
+              <span class="social-icon apple">A</span>
+              <span>Sign in with Apple</span>
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="i18n-ar.js"></script>
+    <script src="lang-toggle.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>
