@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Insights — OTOVISION</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="insights.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="insights" id="insights">
+      <header class="ins-header">
+        <a href="dashboard.html" class="ins-iconbtn" aria-label="Back">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+        <h1 class="ins-header__title">Car Insights</h1>
+        <button type="button" class="ins-iconbtn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="insMenu">
+          <span class="ins-menu-2" aria-hidden="true"><span></span><span></span></span>
+        </button>
+      </header>
+
+      <div class="ins-drawer" id="insMenu" aria-hidden="true">
+        <div class="ins-drawer__backdrop" id="insMenuBackdrop"></div>
+        <nav class="ins-drawer__panel" aria-label="Menu">
+          <button type="button" class="ins-drawer__close" id="insMenuClose" aria-label="Close menu">&times;</button>
+          <ul class="ins-drawer__list">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="login.html">Sign in</a></li>
+            <li><a href="monitors.html">Monitors Menu</a></li>
+            <li><a href="radio.html">Radio</a></li>
+            <li><a href="bluetooth.html">Bluetooth</a></li>
+            <li><a href="ar-history.html">AR History</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="login.html" class="menu-logout">Log out</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <main class="ins-main" id="main">
+        <section class="ins-card ins-card--vehicle" aria-labelledby="vehTitle">
+          <div class="ins-vehicle">
+            <div class="ins-vehicle__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M8 32 L10 22 L18 18 L30 18 L38 22 L40 32 Z" stroke-linejoin="round" />
+                <path d="M12 32 L14 26 L34 26 L36 32" />
+                <circle cx="16" cy="32" r="3" />
+                <circle cx="32" cy="32" r="3" />
+              </svg>
+            </div>
+            <div>
+              <h2 class="ins-vehicle__title" id="vehTitle">My VW Tiguan 2025</h2>
+              <p class="ins-vehicle__vin">VIN: 5YJ3E1EB9KF123456</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="ins-card" aria-labelledby="fuelHeading">
+          <h2 class="visually-hidden" id="fuelHeading">Fuel and range</h2>
+          <div class="ins-fuel-row">
+            <div>
+              <p class="ins-muted">Fuel Level</p>
+              <p class="ins-stat" id="fuelPct">87%</p>
+            </div>
+            <div class="ins-fuel-row__right">
+              <p class="ins-muted">Range</p>
+              <p class="ins-stat">245 mi</p>
+            </div>
+          </div>
+          <div class="ins-progress" role="presentation">
+            <span class="ins-progress__fill" id="fuelBar" style="width: 87%"></span>
+          </div>
+        </section>
+
+        <section class="ins-grid2" aria-label="Vehicle status">
+          <article class="ins-mini">
+            <span class="ins-mini__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6">
+                <circle cx="12" cy="14" r="7" />
+                <path d="M12 7V4" stroke-linecap="round" />
+                <path d="M12 14h3" stroke-linecap="round" />
+              </svg>
+            </span>
+            <p class="ins-mini__val">0 mph</p>
+            <p class="ins-mini__sub">Parked</p>
+          </article>
+          <article class="ins-mini">
+            <span class="ins-mini__icon ins-mini__icon--accent" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <p class="ins-mini__val">350 kW</p>
+            <p class="ins-mini__sub">Max Output</p>
+          </article>
+          <article class="ins-mini">
+            <span class="ins-mini__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M4 18l4-6 4 3 4-8 4 11" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <p class="ins-mini__val">4.2 mi/kWh</p>
+            <p class="ins-mini__sub">Avg 30 days</p>
+          </article>
+          <article class="ins-mini">
+            <span class="ins-mini__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6">
+                <circle cx="12" cy="12" r="8" />
+                <path d="M12 8v5l3 2" stroke-linecap="round" />
+              </svg>
+            </span>
+            <p class="ins-mini__val">2.5 hrs</p>
+            <p class="ins-mini__sub">Last Week</p>
+          </article>
+        </section>
+
+        <section class="ins-card ins-card--flush" aria-labelledby="qaHeading">
+          <h2 class="ins-section-title" id="qaHeading">Quick Actions</h2>
+          <div class="ins-quick">
+            <button type="button" class="ins-quick__btn" data-action="lock">
+              <span class="ins-quick__ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <rect x="6" y="11" width="12" height="10" rx="1.5" />
+                  <path d="M8 11V8a4 4 0 018 0v3" stroke-linecap="round" />
+                </svg>
+              </span>
+              <span>Lock</span>
+            </button>
+            <button type="button" class="ins-quick__btn" data-action="unlock">
+              <span class="ins-quick__ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <rect x="6" y="11" width="12" height="10" rx="1.5" />
+                  <path d="M16 11V7a4 4 0 00-7-2" stroke-linecap="round" />
+                </svg>
+              </span>
+              <span>Unlock</span>
+            </button>
+            <button type="button" class="ins-quick__btn" data-action="climate">
+              <span class="ins-quick__ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M8 16s2 2 4 2 4-2 4-2M6 12h12M6 8h12" stroke-linecap="round" />
+                </svg>
+              </span>
+              <span>Climate</span>
+            </button>
+            <button type="button" class="ins-quick__btn" data-action="charge">
+              <span class="ins-quick__ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M13 2L3 14h7l-1 8 11-12h-7l0-8z" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span>Charge</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="ins-card" aria-labelledby="energyHeading">
+          <div class="ins-energy-head">
+            <h2 class="ins-energy-title" id="energyHeading">
+              <span class="ins-energy-title__ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <rect x="7" y="6" width="10" height="14" rx="2" />
+                  <path d="M10 10h4" stroke-linecap="round" />
+                </svg>
+              </span>
+              Energy Efficiency
+            </h2>
+            <span class="ins-badge-up">+12%</span>
+          </div>
+          <div class="ins-chart" id="energyChart" role="img" aria-label="Efficiency trend chart">
+            <svg class="ins-chart__svg" viewBox="0 0 320 120" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="chGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="rgba(56,189,248,0.35)" />
+                  <stop offset="1" stop-color="rgba(56,189,248,0)" />
+                </linearGradient>
+              </defs>
+              <path
+                fill="url(#chGrad)"
+                d="M0,100 L0,72 L48,80 L96,52 L144,64 L192,38 L240,48 L288,28 L320,40 L320,120 L0,120 Z"
+              />
+              <path
+                fill="none"
+                stroke="#38bdf8"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M0,72 L48,80 L96,52 L144,64 L192,38 L240,48 L288,28 L320,40"
+              />
+            </svg>
+          </div>
+          <div class="ins-energy-foot">
+            <span class="ins-muted">Average Efficiency</span>
+            <span class="ins-energy-foot__val">79.3 mi/kWh</span>
+          </div>
+        </section>
+
+        <section class="ins-card" aria-labelledby="maintHeading">
+          <h2 class="ins-section-title" id="maintHeading">Maintenance &amp; Alerts</h2>
+          <ul class="ins-alerts">
+            <li class="ins-alert ins-alert--warn">
+              <span class="ins-alert__ic" aria-hidden="true">⚠</span>
+              <div>
+                <p class="ins-alert__title">Tire Rotation Due</p>
+                <p class="ins-alert__sub">Recommended in 250 miles</p>
+              </div>
+            </li>
+            <li class="ins-alert ins-alert--ok">
+              <span class="ins-alert__ic" aria-hidden="true">✓</span>
+              <div>
+                <p class="ins-alert__title">Software Up to Date</p>
+                <p class="ins-alert__sub">Version 2024.8.5 installed</p>
+              </div>
+            </li>
+            <li class="ins-alert ins-alert--info">
+              <span class="ins-alert__ic" aria-hidden="true">🔧</span>
+              <div>
+                <p class="ins-alert__title">Service Appointment</p>
+                <p class="ins-alert__sub">Next service in 45 days</p>
+              </div>
+            </li>
+          </ul>
+          <button type="button" class="ins-btn-wide" id="btnSchedule">Schedule Service</button>
+        </section>
+
+        <section class="ins-card" aria-labelledby="tripsHeading">
+          <div class="ins-trips-head">
+            <h2 class="ins-section-title ins-section-title--nomargin" id="tripsHeading">Recent Trips</h2>
+            <a href="#" class="ins-link" id="viewAllTrips">View All</a>
+          </div>
+          <ul class="ins-trips">
+            <li>
+              <span class="ins-trips__pin" aria-hidden="true">📍</span>
+              <div class="ins-trips__body">
+                <p class="ins-trips__name">Downtown Office</p>
+                <p class="ins-trips__meta">18.4 mi • 4.5 mi/kWh</p>
+                <p class="ins-trips__time">Today, 8:30 AM</p>
+              </div>
+            </li>
+            <li>
+              <span class="ins-trips__pin" aria-hidden="true">📍</span>
+              <div class="ins-trips__body">
+                <p class="ins-trips__name">Mall of Arabia</p>
+                <p class="ins-trips__meta">12.1 mi • 4.1 mi/kWh</p>
+                <p class="ins-trips__time">Yesterday, 6:15 PM</p>
+              </div>
+            </li>
+            <li>
+              <span class="ins-trips__pin" aria-hidden="true">📍</span>
+              <div class="ins-trips__body">
+                <p class="ins-trips__name">Airport Terminal 2</p>
+                <p class="ins-trips__meta">34.2 mi • 3.9 mi/kWh</p>
+                <p class="ins-trips__time">Mon, 5:40 AM</p>
+              </div>
+            </li>
+          </ul>
+          <button type="button" class="ins-btn-wide" id="btnNewTrip">Start New Trip</button>
+        </section>
+      </main>
+
+      <nav class="dock" aria-label="Primary">
+        <a href="home.html"><button type="button" class="dock__btn" aria-label="Power"><img src="images/start icon.svg" alt=""></button></a>
+        <a href="car-screen.html"><button type="button" class="dock__btn" aria-label="Messages"><img src="images/carscreen icon.svg" alt=""></button></a>
+        <a href="dashboard.html"><button type="button" class="dock__btn dock__btn--active" aria-current="page" aria-label="Home">
+          <span class="dock__home"><img src="images/home icon.svg" alt=""></span>
+        </button></a>
+        <a href="insights.html"><button type="button" class="dock__btn" aria-label="Statistics"><img src="images/Vector.svg" alt=""></button></a>
+        <a href="profile.html"><button type="button" class="dock__btn dock__btn--avatar" aria-label="Profile">
+          <img src="images/me.svg" width="28" height="28" />
+        </button></a>
+      </nav>
+    </div>
+
+    <script src="i18n-ar.js"></script>
+    <script src="lang-toggle.js"></script>
+    <script src="insights.js"></script>
+    <script src="nav-animations.js"></script>
+  </body>
+</html>
