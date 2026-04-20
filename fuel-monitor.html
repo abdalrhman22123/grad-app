@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fuel Monitor — VW Tiguan 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="fuel-monitor.css" />
+  </head>
+  <body>
+    <div class="fm-page">
+      <header class="fm-head">
+        <a class="fm-back" href="monitors.html" aria-label="Back">←</a>
+        <div>
+          <p class="fm-kicker">Fuel Analytics</p>
+          <h1 class="fm-title">Fuel Monitor</h1>
+        </div>
+      </header>
+
+      <section class="fm-card">
+        <div class="fm-top">
+          <p>Fuel Level</p>
+          <strong id="fmPercent">68%</strong>
+        </div>
+        <div class="fm-bar"><span style="width:68%"></span></div>
+        <div class="fm-meta">
+          <span>Range: 412 km</span>
+          <span>Avg: 6.8 L/100km</span>
+        </div>
+      </section>
+
+      <section class="fm-grid">
+        <article class="fm-card">
+          <h2>Consumption</h2>
+          <p class="fm-big">7.1 L/100km</p>
+          <small>Last 7 days</small>
+        </article>
+        <article class="fm-card">
+          <h2>Cost</h2>
+          <p class="fm-big">$82.40</p>
+          <small>This month</small>
+        </article>
+      </section>
+
+      <section class="fm-card">
+        <h2>Refill History</h2>
+        <ul class="fm-list">
+          <li><span>Apr 20 · Shell</span><b>42 L</b></li>
+          <li><span>Apr 10 · Total</span><b>35 L</b></li>
+          <li><span>Mar 28 · Mobil</span><b>40 L</b></li>
+        </ul>
+      </section>
+    </div>
+    <script src="i18n-ar.js"></script>
+    <script src="lang-toggle.js"></script>
+    <script src="fuel-monitor.js"></script>
+  </body>
+</html>
