@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings — OTOVISION</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="settings.css" />
+  </head>
+  <body>
+    <a class="st-skip" href="#main">Skip to content</a>
+
+    <div class="st-page">
+      <header class="st-header">
+        <a href="dashboard.html" class="st-back" aria-label="Back">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+        <h1 class="st-title">Settings</h1>
+        <button type="button" class="st-iconbtn" id="stMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="stMenu">
+          <span class="st-menu-3" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </header>
+
+      <div class="st-drawer" id="stMenu" aria-hidden="true">
+        <div class="st-drawer__backdrop" id="stMenuBackdrop"></div>
+        <nav class="st-drawer__panel" aria-label="Menu">
+          <button type="button" class="st-drawer__close" id="stMenuClose" aria-label="Close menu">&times;</button>
+          <ul class="st-drawer__list">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="login.html">Sign in</a></li>
+            <li><a href="monitors.html">Monitors Menu</a></li>
+            <li><a href="radio.html">Radio</a></li>
+            <li><a href="bluetooth.html">Bluetooth</a></li>
+            <li><a href="ar-history.html">AR History</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="login.html" class="menu-logout">Log out</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <main class="st-main" id="main">
+        <section class="st-card" aria-labelledby="stThemeH">
+          <h2 class="st-h2" id="stThemeH">Theme</h2>
+          <div class="st-theme-grid" role="radiogroup" aria-label="Theme mode">
+            <button type="button" class="st-theme is-active" role="radio" aria-checked="true" data-theme="dark">Dark</button>
+            <button type="button" class="st-theme" role="radio" aria-checked="false" data-theme="light">Light</button>
+            <button type="button" class="st-theme" role="radio" aria-checked="false" data-theme="auto">Auto</button>
+          </div>
+        </section>
+
+        <section class="st-card" aria-labelledby="stDriveH">
+          <h2 class="st-h2" id="stDriveH">Driving Preferences</h2>
+          <div class="st-row">
+            <span>Units</span>
+            <select id="stUnits" class="st-select">
+              <option value="metric">Metric (km, C)</option>
+              <option value="imperial">Imperial (mi, F)</option>
+            </select>
+          </div>
+          <div class="st-row">
+            <span>Default Navigation App</span>
+            <select id="stNavApp" class="st-select">
+              <option value="maps">OTOVISION Maps</option>
+              <option value="google">Google Maps</option>
+              <option value="waze">Waze</option>
+            </select>
+          </div>
+          <div class="st-row">
+            <span>Regenerative Braking</span>
+            <button type="button" class="st-switch is-on" id="stRegen" role="switch" aria-checked="true"><span></span></button>
+          </div>
+        </section>
+
+        <section class="st-card" aria-labelledby="stNotifyH">
+          <h2 class="st-h2" id="stNotifyH">Notifications</h2>
+          <div class="st-row"><span>Trip Summaries</span><button type="button" class="st-switch is-on" role="switch" aria-checked="true"><span></span></button></div>
+          <div class="st-row"><span>Maintenance Alerts</span><button type="button" class="st-switch is-on" role="switch" aria-checked="true"><span></span></button></div>
+          <div class="st-row"><span>Charging Alerts</span><button type="button" class="st-switch" role="switch" aria-checked="false"><span></span></button></div>
+          <div class="st-row"><span>Security Alerts</span><button type="button" class="st-switch is-on" role="switch" aria-checked="true"><span></span></button></div>
+        </section>
+
+        <section class="st-card" aria-labelledby="stPrivacyH">
+          <h2 class="st-h2" id="stPrivacyH">Privacy & Safety</h2>
+          <div class="st-row"><span>Location Sharing</span><button type="button" class="st-switch" role="switch" aria-checked="false"><span></span></button></div>
+          <div class="st-row"><span>Crash Data Upload</span><button type="button" class="st-switch is-on" role="switch" aria-checked="true"><span></span></button></div>
+          <div class="st-row"><span>Biometric Unlock</span><button type="button" class="st-switch is-on" role="switch" aria-checked="true"><span></span></button></div>
+        </section>
+
+        <section class="st-card" aria-labelledby="stSystemH">
+          <h2 class="st-h2" id="stSystemH">System</h2>
+          <button type="button" class="st-btn st-btn--soft" id="stCheckUpdates">Check for Updates</button>
+          <button type="button" class="st-btn st-btn--soft" id="stBackupNow">Backup Now</button>
+          <button type="button" class="st-btn st-btn--danger" id="stResetPrefs">Reset Preferences</button>
+        </section>
+      </main>
+
+      <nav class="dock" aria-label="Primary">
+        <a href="home.html"><button type="button" class="dock__btn" aria-label="Power"><img src="images/start icon.svg" alt=""></button></a>
+        <a href="car-screen.html"><button type="button" class="dock__btn" aria-label="Messages"><img src="images/carscreen icon.svg" alt=""></button></a>
+        <a href="dashboard.html"><button type="button" class="dock__btn dock__btn--active" aria-current="page" aria-label="Home">
+          <span class="dock__home"><img src="images/home icon.svg" alt=""></span>
+        </button></a>
+        <a href="insights.html"><button type="button" class="dock__btn" aria-label="Statistics"><img src="images/Vector.svg" alt=""></button></a>
+        <a href="profile.html"><button type="button" class="dock__btn dock__btn--avatar" aria-label="Profile">
+          <img src="images/me.svg" width="28" height="28" />
+        </button></a>
+      </nav>
+    </div>
+
+    <script src="i18n-ar.js"></script>
+    <script src="lang-toggle.js"></script>
+    <script src="settings.js"></script>
+    <script src="nav-animations.js"></script>
+  </body>
+</html>
