@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Engine Health — VW Tiguan 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="engine-health.css" />
+  </head>
+  <body>
+    <main class="eh-page">
+      <header class="eh-head">
+        <a class="eh-back" href="monitors.html" aria-label="Back">←</a>
+        <div>
+          <p class="eh-kicker">Powertrain Diagnostics</p>
+          <h1 class="eh-title">Engine Health</h1>
+        </div>
+      </header>
+
+      <section class="eh-card eh-card--status">
+        <div class="eh-status-top">
+          <p>Overall Engine Status</p>
+          <span class="eh-chip eh-chip--warn">Needs Service</span>
+        </div>
+        <p class="eh-big">71%</p>
+        <p class="eh-sub">Performance is stable but maintenance is now due.</p>
+        <div class="eh-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="71">
+          <span class="eh-bar__fill" style="width: 71%"></span>
+        </div>
+      </section>
+
+      <section class="eh-grid">
+        <article class="eh-card">
+          <h2>Oil Change</h2>
+          <p class="eh-value eh-value--danger">Due Now</p>
+          <small>Last change: 8,200 km ago</small>
+        </article>
+        <article class="eh-card">
+          <h2>Estimated Time</h2>
+          <p class="eh-value">Within 3 days</p>
+          <small>Recommended immediately</small>
+        </article>
+      </section>
+
+      <section class="eh-card">
+        <h2>Live Engine Readings</h2>
+        <ul class="eh-list">
+          <li><span>Oil Pressure</span><b>41 PSI</b></li>
+          <li><span>Oil Temperature</span><b>204°F</b></li>
+          <li><span>Coolant Temperature</span><b>198°F</b></li>
+          <li><span>Engine Load</span><b>62%</b></li>
+        </ul>
+      </section>
+
+      <section class="eh-card eh-card--alert">
+        <h2>Maintenance Alert</h2>
+        <p>
+          It is time to change engine oil. Continuing without service may reduce
+          engine efficiency and increase wear.
+        </p>
+        <div class="eh-actions">
+          <button type="button" class="eh-btn eh-btn--primary" id="ehBookNow">Book Service Now</button>
+          <button type="button" class="eh-btn eh-btn--soft" id="ehRemindMe">Remind Me Later</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="i18n-ar.js"></script>
+    <script src="lang-toggle.js"></script>
+    <script src="engine-health.js"></script>
+  </body>
+</html>
