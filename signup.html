@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTOVISION — Create Account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+  <body>
+    <main class="signup-page">
+      <header class="brand-block" aria-label="OTOVISION">
+        <img class="logo" src="images/logo.svg" alt="OTOVISION logo" width="120" height="120" />
+        <h1 class="brand-name">OTOVISION</h1>
+      </header>
+
+      <section class="signup-card" aria-label="Create account form">
+        <span class="border-mask border-mask--top" aria-hidden="true"></span>
+        <span class="border-mask border-mask--bottom" aria-hidden="true"></span>
+        <span class="border-mask border-mask--left" aria-hidden="true"></span>
+        <span class="border-mask border-mask--right" aria-hidden="true"></span>
+        <form id="signupForm" class="signup-form" novalidate>
+          <div class="copy">
+            <h2>Create Account!</h2>
+            <p>Please enter your details</p>
+          </div>
+
+          <label class="sr-only" for="firstName">First name</label>
+          <input
+            id="firstName"
+            name="firstName"
+            type="text"
+            placeholder="First name"
+            autocomplete="given-name"
+            required
+          />
+
+          <label class="sr-only" for="surname">Surname</label>
+          <input id="surname" name="surname" type="text" placeholder="Surname" autocomplete="family-name" required />
+
+          <label class="sr-only" for="phone">Phone number</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            placeholder="Phone number"
+            autocomplete="tel"
+            inputmode="tel"
+            required
+          />
+
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="Email" autocomplete="email" required />
+
+          <label class="sr-only" for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Password"
+            autocomplete="new-password"
+            minlength="8"
+            required
+          />
+
+          <label class="remember-wrap" for="remember">
+            <input id="remember" name="remember" type="checkbox" />
+            <span>Remember Me</span>
+          </label>
+
+          <a href="dashboard.html"><button id="signUpButton" class="primary-button" type="submit">Sign Up</button></a>
+
+          <p class="footer-text">
+            <span>I have account</span>
+            <a href="login.html" class="text-link strong" id="signInLink">Sign In</a>
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <script src="i18n-ar.js"></script>
+    <script src="lang-toggle.js"></script>
+    <script src="signup.js"></script>
+  </body>
+</html>
