@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bluetooth — My VW Tiguan 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="bluetooth.css" />
+  </head>
+  <body>
+    <a class="bt-skip" href="#main">Skip to content</a>
+
+    <div class="bt-page">
+      <header class="bt-header">
+        <a href="dashboard.html" class="bt-back" aria-label="Back">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+        <h1 class="bt-header__title">Bluetooth</h1>
+        <button type="button" class="bt-iconbtn" id="btMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="btMenu">
+          <span class="bt-menu-3" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </header>
+
+      <div class="bt-drawer" id="btMenu" aria-hidden="true">
+        <div class="bt-drawer__backdrop" id="btMenuBackdrop"></div>
+        <nav class="bt-drawer__panel" aria-label="Menu">
+          <button type="button" class="bt-drawer__close" id="btMenuClose" aria-label="Close menu">&times;</button>
+          <ul class="bt-drawer__list">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="login.html">Sign in</a></li>
+            <li><a href="monitors.html">Monitors Menu</a></li>
+            <li><a href="radio.html">Radio</a></li>
+            <li><a href="bluetooth.html">Bluetooth</a></li>
+            <li><a href="ar-history.html">AR History</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="login.html" class="menu-logout">Log out</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <main class="bt-main" id="main">
+        <section class="bt-card bt-card--now" aria-labelledby="btNowH">
+          <h2 class="visually-hidden" id="btNowH">Now playing</h2>
+          <div class="bt-cover"><img src="images/image 23.svg" alt=""></div>
+          <p class="bt-song">Home</p>
+          <p class="bt-artist">NF</p>
+          <p class="bt-album">Future Nostalgia</p>
+          <div class="bt-progress-wrap">
+            <input type="range" id="btTrackRange" min="0" max="100" value="32" />
+            <div class="bt-progress-times"><span id="btCurTime">1:23</span><span id="btDurTime">3:55</span></div>
+          </div>
+          <div class="bt-now-actions">
+            <button type="button" class="bt-circle" id="btLike" aria-pressed="false">♡</button>
+            <button type="button" class="bt-circle" id="btShuffle">↻</button>
+            <button type="button" class="bt-circle" id="btRepeat">⟲</button>
+          </div>
+        </section>
+
+        <section class="bt-card" aria-labelledby="btPlayH">
+          <h2 class="bt-h2" id="btPlayH">Playback Controls</h2>
+          <div class="bt-play-row">
+            <button type="button" class="bt-play-btn">⤮</button>
+            <button type="button" class="bt-play-btn">|◁</button>
+            <button type="button" class="bt-play-btn bt-play-btn--main" id="btPlayPause" aria-pressed="true">❚❚</button>
+            <button type="button" class="bt-play-btn">▷|</button>
+            <button type="button" class="bt-play-btn">⇄</button>
+          </div>
+          <div class="bt-volume-head"><span>Volume</span><span id="btVolPct">70%</span></div>
+          <input type="range" id="btVolRange" min="0" max="100" value="70" />
+          <div class="bt-tab-row">
+            <button type="button" class="bt-tab">Queue</button>
+            <button type="button" class="bt-tab">Lyrics</button>
+            <button type="button" class="bt-tab bt-tab--active">Equalizer</button>
+          </div>
+        </section>
+
+        <section class="bt-card" aria-labelledby="btConnH">
+          <div class="bt-sec-head">
+            <h2 class="bt-h2 bt-h2--nom" id="btConnH">Connected Devices</h2>
+            <span class="bt-meta">2 active</span>
+          </div>
+          <ul class="bt-dev-list" id="btConnectedList">
+            <li class="bt-dev is-active">
+              <span class="bt-dev__icon">📱</span>
+              <div class="bt-dev__body"><p>iPhone 13 Pro</p><small>Playing audio · Strong signal</small></div>
+              <span class="bt-dev__badge">57%</span>
+            </li>
+            <li class="bt-dev is-active">
+              <span class="bt-dev__icon">🎧</span>
+              <div class="bt-dev__body"><p>AirPods Pro</p><small>Connected · Medium signal</small></div>
+              <span class="bt-dev__badge">81%</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="bt-card" aria-labelledby="btAvailH">
+          <div class="bt-sec-head">
+            <h2 class="bt-h2 bt-h2--nom" id="btAvailH">Available Devices</h2>
+            <button type="button" class="bt-scan" id="btScanBtn">↻ Scan</button>
+          </div>
+          <ul class="bt-dev-list" id="btAvailableList">
+            <li class="bt-dev">
+              <span class="bt-dev__icon">⌨</span>
+              <div class="bt-dev__body"><p>MacBook Pro</p><small>Paired</small></div>
+              <button type="button" class="bt-connect">Connect</button>
+            </li>
+            <li class="bt-dev">
+              <span class="bt-dev__icon">📱</span>
+              <div class="bt-dev__body"><p>Samsung Galaxy S24</p><small>Paired</small></div>
+              <button type="button" class="bt-connect">Pair</button>
+            </li>
+            <li class="bt-dev">
+              <span class="bt-dev__icon">⌚</span>
+              <div class="bt-dev__body"><p>Apple Watch</p><small>Paired</small></div>
+              <button type="button" class="bt-connect">Connect</button>
+            </li>
+            <li class="bt-dev">
+              <span class="bt-dev__icon">🎧</span>
+              <div class="bt-dev__body"><p>Sony WH-1000XM4</p><small>Strong signal</small></div>
+              <button type="button" class="bt-connect">Pair</button>
+            </li>
+          </ul>
+        </section>
+
+        <section class="bt-card" aria-labelledby="btSetH">
+          <h2 class="bt-h2" id="btSetH">Bluetooth Settings</h2>
+          <div class="bt-setting">
+            <div><p>Device Visibility</p><small>Allow your car to be discoverable to nearby devices</small></div>
+            <button type="button" class="bt-switch" role="switch" aria-checked="false"><span></span></button>
+          </div>
+          <div class="bt-setting">
+            <div><p>Auto-Connect</p><small>Automatically connect to known devices</small></div>
+            <button type="button" class="bt-switch is-on" role="switch" aria-checked="true"><span></span></button>
+          </div>
+          <div class="bt-setting">
+            <div><p>Connection Alerts</p><small>Notify when devices connect or disconnect</small></div>
+            <button type="button" class="bt-switch is-on" role="switch" aria-checked="true"><span></span></button>
+          </div>
+          <div class="bt-setting">
+            <div><p>Low Energy Mode</p><small>Reduce power consumption for Bluetooth</small></div>
+            <button type="button" class="bt-switch" role="switch" aria-checked="false"><span></span></button>
+          </div>
+          <div class="bt-meta-box">Active Device: <strong>My Car Audio System</strong></div>
+          <button type="button" class="bt-btn bt-btn--primary">Advanced Settings</button>
+          <button type="button" class="bt-btn bt-btn--danger">Clear All Paired Devices</button>
+        </section>
+      </main>
+
+      <nav class="dock" aria-label="Primary">
+        <a href="home.html"><button type="button" class="dock__btn" aria-label="Power"><img src="images/start icon.svg" alt=""></button></a>
+        <a href="car-screen.html"><button type="button" class="dock__btn" aria-label="Messages"><img src="images/carscreen icon.svg" alt=""></button></a>
+        <a href="dashboard.html"><button type="button" class="dock__btn dock__btn--active" aria-current="page" aria-label="Home">
+          <span class="dock__home"><img src="images/home icon.svg" alt=""></span>
+        </button></a>
+        <a href="insights.html"><button type="button" class="dock__btn" aria-label="Statistics"><img src="images/Vector.svg" alt=""></button></a>
+        <a href="profile.html"><button type="button" class="dock__btn dock__btn--avatar" aria-label="Profile">
+          <img src="images/me.svg" width="28" height="28" />
+        </button></a>
+      </nav>
+    </div>
+
+    <script src="i18n-ar.js"></script>
+    <script src="lang-toggle.js"></script>
+    <script src="bluetooth.js"></script>
+    <script src="nav-animations.js"></script>
+  </body>
+</html>
