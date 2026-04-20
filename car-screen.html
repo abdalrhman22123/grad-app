@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Screen — Settings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="car-screen.css" />
+  </head>
+  <body>
+    <a class="cs-skip" href="#main">Skip to content</a>
+
+    <div class="cs-page">
+      <header class="cs-header">
+        <a href="dashboard.html" class="cs-iconbtn" aria-label="Back">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+        <div class="cs-header__mid">
+          <h1 class="cs-header__title">Car Screen</h1>
+          <p class="cs-header__sub">Customize your car screen appearance and preferences</p>
+        </div>
+        <button type="button" class="cs-iconbtn" id="csMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="csMenu">
+          <span class="cs-menu-3" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </header>
+
+      <div class="cs-drawer" id="csMenu" aria-hidden="true">
+        <div class="cs-drawer__backdrop" id="csMenuBackdrop"></div>
+        <nav class="cs-drawer__panel" aria-label="Menu">
+          <button type="button" class="cs-drawer__close" id="csMenuClose" aria-label="Close menu">&times;</button>
+          <ul class="cs-drawer__list">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="login.html">Sign in</a></li>
+            <li><a href="monitors.html">Monitors Menu</a></li>
+            <li><a href="radio.html">Radio</a></li>
+            <li><a href="bluetooth.html">Bluetooth</a></li>
+            <li><a href="ar-history.html">AR History</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="login.html" class="menu-logout">Log out</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <main class="cs-main" id="main">
+        <section class="cs-card" aria-labelledby="themeH">
+          <h2 class="cs-h2" id="themeH">Theme</h2>
+          <ul class="cs-theme-list" role="radiogroup" aria-label="Theme">
+            <li>
+              <button type="button" class="cs-theme-tile is-selected" role="radio" aria-checked="true" data-theme="dark" id="thDark">
+                <span class="cs-theme-tile__ic" aria-hidden="true">🌙</span>
+                <span class="cs-theme-tile__body">
+                  <span class="cs-theme-tile__t">Dark Mode</span>
+                  <span class="cs-theme-tile__d">Easy on the eyes</span>
+                </span>
+                <span class="cs-theme-tile__check" aria-hidden="true">✓</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="cs-theme-tile" role="radio" aria-checked="false" data-theme="light" id="thLight">
+                <span class="cs-theme-tile__ic" aria-hidden="true">☀️</span>
+                <span class="cs-theme-tile__body">
+                  <span class="cs-theme-tile__t">Light Mode</span>
+                  <span class="cs-theme-tile__d">Bright and clear</span>
+                </span>
+                <span class="cs-theme-tile__check" aria-hidden="true">✓</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="cs-theme-tile" role="radio" aria-checked="false" data-theme="auto" id="thAuto">
+                <span class="cs-theme-tile__ic" aria-hidden="true">💻</span>
+                <span class="cs-theme-tile__body">
+                  <span class="cs-theme-tile__t">Auto</span>
+                  <span class="cs-theme-tile__d">Follows time of day</span>
+                </span>
+                <span class="cs-theme-tile__check" aria-hidden="true">✓</span>
+              </button>
+            </li>
+          </ul>
+        </section>
+
+        <section class="cs-card" aria-labelledby="brightH">
+          <h2 class="cs-h2" id="brightH">Brightness</h2>
+          <div class="cs-slider-head">
+            <span class="cs-muted">Level</span>
+            <span class="cs-slider-val" id="brightVal">75%</span>
+          </div>
+          <div class="cs-slider-row">
+            <span class="cs-slider-ic" aria-hidden="true">🌙</span>
+            <label class="cs-slider-label" for="brightRange">
+              <span class="visually-hidden">Brightness level</span>
+            </label>
+            <input type="range" id="brightRange" min="0" max="100" value="75" />
+            <span class="cs-slider-ic" aria-hidden="true">☀️</span>
+          </div>
+          <div class="cs-row-toggle">
+            <div>
+              <p class="cs-row-toggle__t">Auto Brightness</p>
+              <p class="cs-row-toggle__d">Adjust based on ambient light</p>
+            </div>
+            <button type="button" class="cs-switch" id="swAutoBright" role="switch" aria-checked="false" aria-label="Auto brightness">
+              <span class="cs-switch__knob" aria-hidden="true"></span>
+            </button>
+          </div>
+        </section>
+
+        <section class="cs-card" aria-labelledby="dispH">
+          <h2 class="cs-h2 cs-h2--icon" id="dispH">
+            <span class="cs-h2__ic" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="4" width="18" height="14" rx="2" />
+                <path d="M8 21h8" stroke-linecap="round" />
+              </svg>
+            </span>
+            Display Options
+          </h2>
+
+          <div class="cs-subblock">
+            <p class="cs-subblock__label">
+              <span class="cs-subblock__ic" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <circle cx="12" cy="12" r="8" />
+                  <path d="M12 8v5l3 2" stroke-linecap="round" />
+                </svg>
+              </span>
+              Screen Timeout
+            </p>
+            <div class="cs-chip-grid" role="radiogroup" aria-label="Screen timeout">
+              <button type="button" class="cs-chip" role="radio" aria-checked="false" data-timeout="30">30 seconds</button>
+              <button type="button" class="cs-chip" role="radio" aria-checked="false" data-timeout="60">1 minute</button>
+              <button type="button" class="cs-chip is-selected" role="radio" aria-checked="true" data-timeout="120">2 minutes</button>
+              <button type="button" class="cs-chip" role="radio" aria-checked="false" data-timeout="300">5 minutes</button>
+              <button type="button" class="cs-chip" role="radio" aria-checked="false" data-timeout="0">Never</button>
+            </div>
+          </div>
+
+          <div class="cs-row-action">
+            <span class="cs-row-action__ic" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3" stroke-linecap="round" />
+              </svg>
+            </span>
+            <div class="cs-row-action__text">
+              <p class="cs-row-action__t">Full Screen Mode</p>
+              <p class="cs-row-action__d">Hide status bar</p>
+            </div>
+            <button type="button" class="cs-pill-btn" id="btnFullScreen">Enable</button>
+          </div>
+
+          <div class="cs-row-toggle cs-row-toggle--border">
+            <div class="cs-row-toggle__left">
+              <span class="cs-row-toggle__ic" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </span>
+              <div>
+                <p class="cs-row-toggle__t">Always Show Clock</p>
+                <p class="cs-row-toggle__d">Display time on screen</p>
+              </div>
+            </div>
+            <button type="button" class="cs-switch" id="swClock" role="switch" aria-checked="false" aria-label="Always show clock">
+              <span class="cs-switch__knob" aria-hidden="true"></span>
+            </button>
+          </div>
+        </section>
+
+        <section class="cs-card" aria-labelledby="soundH">
+          <h2 class="cs-h2 cs-h2--icon" id="soundH">
+            <span class="cs-h2__ic" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M11 5L6 9H2v6h4l5 4V5zM15.54 8.46a5 5 0 010 7.07M19.07 4.93a10 10 0 010 14.14" stroke-linecap="round" />
+              </svg>
+            </span>
+            Sound &amp; Alerts
+          </h2>
+          <div class="cs-slider-head">
+            <span class="cs-muted">System Volume</span>
+            <span class="cs-slider-val" id="volVal">60%</span>
+          </div>
+          <div class="cs-slider-row">
+            <span class="cs-slider-ic" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M11 5L6 9H2v6h4l5 4V5z" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <label class="cs-slider-label" for="volRange"><span class="visually-hidden">System volume</span></label>
+            <input type="range" id="volRange" min="0" max="100" value="60" />
+            <span class="cs-slider-ic" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M11 5L6 9H2v6h4l5 4V5zM15.54 8.46a5 5 0 010 7.07" stroke-linecap="round" />
+              </svg>
+            </span>
+          </div>
+          <div class="cs-row-toggle">
+            <div class="cs-row-toggle__left">
+              <span class="cs-row-toggle__ic" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" stroke-linecap="round" />
+                </svg>
+              </span>
+              <div>
+                <p class="cs-row-toggle__t">Notification Sounds</p>
+                <p class="cs-row-toggle__d">Play sounds for alerts</p>
+              </div>
+            </div>
+            <button type="button" class="cs-switch is-on" id="swNotify" role="switch" aria-checked="true" aria-label="Notification sounds">
+              <span class="cs-switch__knob" aria-hidden="true"></span>
+            </button>
+          </div>
+          <button type="button" class="cs-btn-wide" id="btnTestSound">Test Sound</button>
+        </section>
+
+        <section class="cs-card" aria-labelledby="sysH">
+          <h2 class="cs-h2" id="sysH">System</h2>
+          <ul class="cs-sys-actions">
+            <li>
+              <button type="button" class="cs-sys-row" id="btnUpdates">
+                <span class="cs-sys-row__ic" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M23 4v6h-6M1 20v-6h6" stroke-linecap="round" />
+                    <path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span class="cs-sys-row__body">
+                  <span class="cs-sys-row__t">Check for Updates</span>
+                  <span class="cs-sys-row__d">Current version: 2024.8.5</span>
+                </span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="cs-sys-row" id="btnReset">
+                <span class="cs-sys-row__ic" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M3 12a9 9 0 0115-6.7L21 8M21 3v5h-5M21 12a9 9 0 01-15 6.7L3 16M3 21v-5h5" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span class="cs-sys-row__body">
+                  <span class="cs-sys-row__t">Reset to Defaults</span>
+                  <span class="cs-sys-row__d">Restore factory settings</span>
+                </span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="cs-sys-row" id="btnRestart">
+                <span class="cs-sys-row__ic" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span class="cs-sys-row__body">
+                  <span class="cs-sys-row__t">Restart Display</span>
+                  <span class="cs-sys-row__d">Reboot the screen system</span>
+                </span>
+              </button>
+            </li>
+          </ul>
+          <div class="cs-spec-grid" aria-label="Display specifications">
+            <div class="cs-spec"><span class="cs-spec__l">Screen Size</span><span class="cs-spec__v">17 inches</span></div>
+            <div class="cs-spec"><span class="cs-spec__l">Resolution</span><span class="cs-spec__v">1920 × 1200</span></div>
+            <div class="cs-spec"><span class="cs-spec__l">Refresh Rate</span><span class="cs-spec__v">60 Hz</span></div>
+            <div class="cs-spec"><span class="cs-spec__l">Color Depth</span><span class="cs-spec__v">24-bit</span></div>
+          </div>
+        </section>
+      </main>
+
+      <div class="cs-dock-outer">
+        <nav class="dock" aria-label="Primary">
+          <a href="home.html"><button type="button" class="dock__btn" aria-label="Power"><img src="images/start icon.svg" alt=""></button></a>
+          <a href="car-screen.html"><button type="button" class="dock__btn" aria-label="Messages"><img src="images/carscreen icon.svg" alt=""></button></a>
+          <a href="dashboard.html"><button type="button" class="dock__btn dock__btn--active" aria-current="page" aria-label="Home">
+            <span class="dock__home"><img src="images/home icon.svg" alt=""></span>
+          </button></a>
+          <a href="insights.html"><button type="button" class="dock__btn" aria-label="Statistics"><img src="images/Vector.svg" alt=""></button></a>
+          <a href="profile.html"><button type="button" class="dock__btn dock__btn--avatar" aria-label="Profile">
+            <img src="images/me.svg" width="28" height="28" />
+          </button></a>
+        </nav>
+      </div>
+    </div>
+
+    <script src="i18n-ar.js"></script>
+    <script src="lang-toggle.js"></script>
+    <script src="car-screen.js"></script>
+    <script src="nav-animations.js"></script>
+  </body>
+</html>
