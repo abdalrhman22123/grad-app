@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio — Tesla Model 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="radio.css" />
+  </head>
+  <body>
+    <a class="rd-skip" href="#main">Skip to content</a>
+
+    <div class="rd-page">
+      <header class="rd-header">
+        <a href="dashboard.html" class="rd-back" aria-label="Back">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+        <h1 class="rd-header__title">Radio</h1>
+        <button type="button" class="rd-iconbtn" id="rdMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="rdMenu">
+          <span class="rd-menu-3" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </header>
+
+      <div class="rd-drawer" id="rdMenu" aria-hidden="true">
+        <div class="rd-drawer__backdrop" id="rdMenuBackdrop"></div>
+        <nav class="rd-drawer__panel" aria-label="Menu">
+          <button type="button" class="rd-drawer__close" id="rdMenuClose" aria-label="Close menu">&times;</button>
+          <ul class="rd-drawer__list">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="login.html">Sign in</a></li>
+            <li><a href="monitors.html">Monitors Menu</a></li>
+            <li><a href="radio.html">Radio</a></li>
+            <li><a href="bluetooth.html">Bluetooth</a></li>
+            <li><a href="ar-history.html">AR History</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="login.html" class="menu-logout">Log out</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <main class="rd-main" id="main">
+        <section class="rd-card rd-card--vehicle" aria-label="Vehicle">
+          <div class="rd-vehicle">
+            <span class="rd-vehicle__ic" aria-hidden="true">🚗</span>
+            <div>
+              <p class="rd-vehicle__name">My VW Tiguan 2025</p>
+              <p class="rd-vehicle__vin">VIN: 5YJ3E1EA1KF123456</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="rd-card rd-card--now" aria-labelledby="rdNowH">
+          <h2 class="visually-hidden" id="rdNowH">Now playing</h2>
+          <div class="rd-art">
+            <span class="rd-art__note" aria-hidden="true">♪</span>
+          </div>
+          <p class="rd-now-label">Now Playing on</p>
+          <p class="rd-station" id="rdStationName">Mega FM</p>
+          <p class="rd-freq-big" id="rdNowFreq">98.7 MHz</p>
+          <div class="rd-track-inset">
+            <p class="rd-track-inset__lbl">Current Track</p>
+            <p class="rd-track-inset__title">Blinding Lights</p>
+            <p class="rd-track-inset__artist">The Weeknd</p>
+          </div>
+          <div class="rd-now-actions">
+            <button type="button" class="rd-circlebtn" id="rdLike" aria-pressed="false" aria-label="Like track">
+              <span aria-hidden="true">♡</span>
+            </button>
+            <button type="button" class="rd-circlebtn" id="rdShare" aria-label="Share">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <circle cx="18" cy="5" r="3" />
+                <circle cx="6" cy="12" r="3" />
+                <circle cx="18" cy="19" r="3" />
+                <path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98" stroke-linecap="round" />
+              </svg>
+            </button>
+          </div>
+        </section>
+
+        <section class="rd-card rd-card--tuner" aria-labelledby="rdTunerH">
+          <div class="rd-tuner-head">
+            <h2 class="rd-h2" id="rdTunerH">Tuner</h2>
+            <div class="rd-seg" role="group" aria-label="Band">
+              <button type="button" class="rd-seg__btn is-active" id="rdBandFm" data-band="fm">FM</button>
+              <button type="button" class="rd-seg__btn" id="rdBandAm" data-band="am">AM</button>
+            </div>
+          </div>
+          <p class="rd-tuner-lbl">Frequency</p>
+          <p class="rd-tuner-freq" id="rdTunerFreq">98.7 MHz</p>
+          <div class="rd-signal" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="rd-seek-row">
+            <button type="button" class="rd-seekbtn" id="rdSeekDown">Seek &lt;</button>
+            <button type="button" class="rd-seekbtn rd-seekbtn--icon" id="rdSearch" aria-label="Search station">⌕</button>
+            <button type="button" class="rd-seekbtn" id="rdSeekUp">&gt; Seek</button>
+          </div>
+          <div class="rd-slider-wrap">
+            <label class="visually-hidden" for="rdFreqSlider">Tuning frequency</label>
+            <input type="range" id="rdFreqSlider" min="875" max="1080" value="987" step="1" />
+            <div class="rd-slider-ticks">
+              <span id="rdSliderMin">87.5</span>
+              <span id="rdSliderMax">108.0</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="rd-card" aria-labelledby="rdPresetH">
+          <div class="rd-preset-head">
+            <h2 class="rd-h2 rd-h2--inline" id="rdPresetH">
+              <span aria-hidden="true">★</span> Presets
+            </h2>
+            <button type="button" class="rd-addbtn" id="rdAddPreset" aria-label="Add preset">+</button>
+          </div>
+          <div class="rd-preset-grid" id="rdPresetGrid" role="listbox" aria-label="Station presets">
+            <button type="button" class="rd-preset is-active" role="option" aria-selected="true" data-fm="98.7" data-name="Mega FM">
+              <span class="rd-preset__band">FM 1</span>
+              <span class="rd-preset__name">Mega FM</span>
+              <span class="rd-preset__mhz">98.7 MHz</span>
+            </button>
+            <button type="button" class="rd-preset" role="option" aria-selected="false" data-fm="101.2" data-name="Nile FM">
+              <span class="rd-preset__band">FM 2</span>
+              <span class="rd-preset__name">Nile FM</span>
+              <span class="rd-preset__mhz">101.2 MHz</span>
+            </button>
+            <button type="button" class="rd-preset" role="option" aria-selected="false" data-fm="95.0" data-name="On Radio">
+              <span class="rd-preset__band">FM 3</span>
+              <span class="rd-preset__name">On Radio</span>
+              <span class="rd-preset__mhz">95.0 MHz</span>
+            </button>
+            <button type="button" class="rd-preset" role="option" aria-selected="false" data-fm="88.2" data-name="Classic">
+              <span class="rd-preset__band">FM 4</span>
+              <span class="rd-preset__name">Classic Hits</span>
+              <span class="rd-preset__mhz">88.2 MHz</span>
+            </button>
+            <button type="button" class="rd-preset" role="option" aria-selected="false" data-fm="104.2" data-name="Hit">
+              <span class="rd-preset__band">FM 5</span>
+              <span class="rd-preset__name">Hit Music</span>
+              <span class="rd-preset__mhz">104.2 MHz</span>
+            </button>
+            <button type="button" class="rd-preset" role="option" aria-selected="false" data-fm="90.9" data-name="News">
+              <span class="rd-preset__band">FM 6</span>
+              <span class="rd-preset__name">News Talk</span>
+              <span class="rd-preset__mhz">90.9 MHz</span>
+            </button>
+          </div>
+          <button type="button" class="rd-btn-wide" id="rdEditPresets">Edit Presets</button>
+        </section>
+
+        <section class="rd-card" aria-labelledby="rdSrcH">
+          <h2 class="rd-h2" id="rdSrcH">Audio Sources</h2>
+          <div class="rd-src-grid" role="radiogroup" aria-label="Audio source">
+            <button type="button" class="rd-src is-active" role="radio" aria-checked="true" data-source="radio">
+              <span class="rd-src__ic" aria-hidden="true">📻</span>
+              <span>Radio</span>
+            </button>
+            <button type="button" class="rd-src" role="radio" aria-checked="false" data-source="music">
+              <span class="rd-src__ic" aria-hidden="true">🎵</span>
+              <span>Music</span>
+            </button>
+            <button type="button" class="rd-src" role="radio" aria-checked="false" data-source="podcast">
+              <span class="rd-src__ic" aria-hidden="true">🎙</span>
+              <span>Podcast</span>
+            </button>
+            <button type="button" class="rd-src" role="radio" aria-checked="false" data-source="stream">
+              <span class="rd-src__ic" aria-hidden="true">📡</span>
+              <span>Streaming</span>
+            </button>
+            <button type="button" class="rd-src" role="radio" aria-checked="false" data-source="bt">
+              <span class="rd-src__ic" aria-hidden="true">📶</span>
+              <span>Bluetooth</span>
+            </button>
+            <button type="button" class="rd-src" role="radio" aria-checked="false" data-source="usb">
+              <span class="rd-src__ic" aria-hidden="true">💾</span>
+              <span>USB</span>
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <nav class="dock" aria-label="Primary">
+        <a href="home.html"><button type="button" class="dock__btn" aria-label="Power"><img src="images/start icon.svg" alt=""></button></a>
+        <a href="car-screen.html"><button type="button" class="dock__btn" aria-label="Messages"><img src="images/carscreen icon.svg" alt=""></button></a>
+        <a href="dashboard.html"><button type="button" class="dock__btn dock__btn--active" aria-current="page" aria-label="Home">
+          <span class="dock__home"><img src="images/home icon.svg" alt=""></span>
+        </button></a>
+        <a href="insights.html"><button type="button" class="dock__btn" aria-label="Statistics"><img src="images/Vector.svg" alt=""></button></a>
+        <a href="profile.html"><button type="button" class="dock__btn dock__btn--avatar" aria-label="Profile">
+          <img src="images/me.svg" width="28" height="28" />
+        </button></a>
+      </nav>
+    </div>
+
+    <script src="i18n-ar.js"></script>
+    <script src="lang-toggle.js"></script>
+    <script src="radio.js"></script>
+    <script src="nav-animations.js"></script>
+  </body>
+</html>
