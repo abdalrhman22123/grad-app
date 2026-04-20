@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oil Monitor — VW Tiguan 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="oil-monitor.css" />
+  </head>
+  <body>
+    <a class="om-skip" href="#main">Skip to content</a>
+
+    <div class="om-page">
+      <header class="om-header">
+        <div class="om-header__copy">
+          <p class="om-kicker">Ready to have a ride today?</p>
+          <h1 class="om-title">VW Tiguan 2025</h1>
+        </div>
+        <button type="button" class="om-iconbtn" id="omMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="omMenu">
+          <span class="om-menu-3" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </header>
+
+      <div class="om-drawer" id="omMenu" aria-hidden="true">
+        <div class="om-drawer__backdrop" id="omMenuBackdrop"></div>
+        <nav class="om-drawer__panel" aria-label="Menu">
+          <button type="button" class="om-drawer__close" id="omMenuClose" aria-label="Close menu">&times;</button>
+          <ul class="om-drawer__list">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="login.html">Sign in</a></li>
+            <li><a href="monitors.html">Monitors Menu</a></li>
+            <li><a href="radio.html">Radio</a></li>
+            <li><a href="bluetooth.html">Bluetooth</a></li>
+            <li><a href="ar-history.html">AR History</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="login.html" class="menu-logout">Log out</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <main class="om-main" id="main">
+        <section class="om-card om-card--status" aria-labelledby="omSysH">
+          <div class="om-status-head">
+            <div class="om-status-head__left">
+              <span class="om-shield" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <h2 class="om-status-head__title" id="omSysH">System Status</h2>
+            </div>
+            <div class="om-oil-drop" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" opacity="0.5">
+                <path
+                  d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"
+                  stroke="currentColor"
+                  stroke-width="1.2"
+                  fill="rgba(96,165,250,0.15)"
+                />
+              </svg>
+            </div>
+          </div>
+          <p class="om-status-ex">Excellent</p>
+          <p class="om-status-sub">Oil condition is optimal.</p>
+          <div class="om-nest">
+            <div class="om-oilbar-head">
+              <span>Oil Level</span>
+              <span>85%</span>
+            </div>
+            <div class="om-oilbar" role="presentation">
+              <span class="om-oilbar__fill" style="width: 85%"></span>
+            </div>
+            <div class="om-oilbar-ticks">
+              <span>MIN</span>
+              <span><span class="om-wave" aria-hidden="true">〰</span> Normal Range</span>
+              <span>MAX</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="om-card" aria-labelledby="omLiveH">
+          <div class="om-live-head">
+            <h2 class="om-h2" id="omLiveH">Live Metrics</h2>
+            <span class="om-live-pill"><span class="om-live-dot" aria-hidden="true"></span> Live</span>
+          </div>
+          <div class="om-metric-grid">
+            <article class="om-metric">
+              <span class="om-metric__ic" aria-hidden="true">◎</span>
+              <p class="om-metric__lbl">Pressure</p>
+              <p class="om-metric__val">45 PSI</p>
+              <p class="om-metric__st"><span class="om-dot-g"></span> Normal</p>
+            </article>
+            <article class="om-metric">
+              <span class="om-metric__ic" aria-hidden="true">🌡</span>
+              <p class="om-metric__lbl">Temperature</p>
+              <p class="om-metric__val">195 °F</p>
+              <p class="om-metric__st"><span class="om-dot-g"></span> Normal</p>
+            </article>
+            <article class="om-metric">
+              <span class="om-metric__ic" aria-hidden="true">≋</span>
+              <p class="om-metric__lbl">Viscosity</p>
+              <p class="om-metric__val">5W-30</p>
+              <p class="om-metric__st"><span class="om-dot-g"></span> Optimal</p>
+            </article>
+            <article class="om-metric">
+              <span class="om-metric__ic" aria-hidden="true">✦</span>
+              <p class="om-metric__lbl">Quality</p>
+              <p class="om-metric__val">92 %</p>
+              <p class="om-metric__st"><span class="om-dot-g"></span> Excellent</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="om-card" aria-labelledby="omLifeH">
+          <div class="om-life-head">
+            <h2 class="om-h2 om-h2--nom" id="omLifeH">Oil Life Remaining</h2>
+            <span class="om-trend">−3% this week</span>
+          </div>
+          <div class="om-donut-wrap">
+            <svg class="om-donut" viewBox="0 0 120 120" aria-hidden="true">
+              <defs>
+                <linearGradient id="omDonutGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#4ade80" />
+                  <stop offset="1" stop-color="#22c55e" />
+                </linearGradient>
+              </defs>
+              <circle class="om-donut__track" cx="60" cy="60" r="46" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="12" />
+              <circle
+                id="omDonutArc"
+                class="om-donut__arc"
+                cx="60"
+                cy="60"
+                r="46"
+                fill="none"
+                stroke="url(#omDonutGrad)"
+                stroke-width="12"
+                stroke-linecap="round"
+                transform="rotate(-90 60 60)"
+                stroke-dasharray="0 289"
+              />
+            </svg>
+            <div class="om-donut__center">
+              <span class="om-donut__pct" id="omDonutPct">0</span>
+              <span class="om-donut__lbl">Oil Life</span>
+            </div>
+          </div>
+          <div class="om-life-stats">
+            <div class="om-life-stat">
+              <p class="om-life-stat__lbl">Days Left</p>
+              <p class="om-life-stat__val">45</p>
+              <p class="om-life-stat__sub">Approximately 1.5 months</p>
+            </div>
+            <div class="om-life-stat">
+              <p class="om-life-stat__lbl">Miles Left</p>
+              <p class="om-life-stat__val">2,850</p>
+              <p class="om-life-stat__sub">Until service needed</p>
+            </div>
+          </div>
+          <div class="om-life-foot">
+            <span class="om-life-foot__txt">Next Oil Change: May 1, 2025</span>
+            <button type="button" class="om-btn-remind" id="omBtnRemind">Set Reminder</button>
+          </div>
+        </section>
+
+        <section class="om-card" aria-labelledby="omHistH">
+          <div class="om-sechead">
+            <h2 class="om-sechead__title" id="omHistH">
+              <span class="om-sechead__ic" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v6l3 2" stroke-linecap="round" />
+                </svg>
+              </span>
+              Service History
+            </h2>
+            <a href="#" class="om-link" id="omViewAllHist">View All</a>
+          </div>
+          <ul class="om-hist-list">
+            <li>
+              <span class="om-hist-check" aria-hidden="true">✓</span>
+              <div class="om-hist-body">
+                <p class="om-hist-title">Full Synthetic 5W-30</p>
+                <p class="om-hist-meta">Jan 12, 2025 · 22,345 mi · Tesla Service Center</p>
+              </div>
+              <span class="om-hist-price">$89.99</span>
+            </li>
+            <li>
+              <span class="om-hist-check" aria-hidden="true">✓</span>
+              <div class="om-hist-body">
+                <p class="om-hist-title">Full Synthetic 5W-30</p>
+                <p class="om-hist-meta">Aug 3, 2024 · 18,120 mi · Tesla Service Center</p>
+              </div>
+              <span class="om-hist-price">$89.99</span>
+            </li>
+            <li>
+              <span class="om-hist-check" aria-hidden="true">✓</span>
+              <div class="om-hist-body">
+                <p class="om-hist-title">Full Synthetic 5W-30</p>
+                <p class="om-hist-meta">Mar 20, 2024 · 14,002 mi · Tesla Service Center</p>
+              </div>
+              <span class="om-hist-price">$84.50</span>
+            </li>
+          </ul>
+          <button type="button" class="om-btn-wide" id="omBtnExport">Export Service Records</button>
+        </section>
+
+        <section class="om-card" aria-labelledby="omRecH">
+          <div class="om-rec-head">
+            <span class="om-bulb" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.6">
+                <path d="M9 18h6M10 22h4" stroke-linecap="round" />
+                <path d="M12 2a7 7 0 017 7c0 2.5-1.5 4.5-3 6v1H8v-1c-1.5-1.5-3-3.5-3-6a7 7 0 017-7z" />
+              </svg>
+            </span>
+            <div>
+              <h2 class="om-h2 om-h2--nom" id="omRecH">Recommended Oils</h2>
+              <p class="om-rec-sub">Best matches for your vehicle</p>
+            </div>
+          </div>
+          <div class="om-products">
+            <article class="om-product">
+              <div class="om-product__badge om-product__badge--star" aria-hidden="true">★</div>
+              <h3 class="om-product__t">Premium Synthetic</h3>
+              <p class="om-product__b">Mobil 1 · Extended Performance</p>
+              <p class="om-product__price">$42.99 <span class="om-stars">★ 4.8</span></p>
+              <ul class="om-product__feats">
+                <li>15,000 mile protection</li>
+                <li>Low-temperature flow</li>
+              </ul>
+              <button type="button" class="om-btn-wide om-btn-wide--ghost om-product__btn">View Details</button>
+            </article>
+            <article class="om-product">
+              <div class="om-product__badge om-product__badge--circ" aria-hidden="true">●</div>
+              <h3 class="om-product__t">OEM Grade</h3>
+              <p class="om-product__b">Castrol EDGE · VW 502 00</p>
+              <p class="om-product__price">$38.50 <span class="om-stars">★ 4.7</span></p>
+              <ul class="om-product__feats">
+                <li>Factory specification match</li>
+                <li>High shear stability</li>
+              </ul>
+              <button type="button" class="om-btn-wide om-btn-wide--ghost om-product__btn">View Details</button>
+            </article>
+            <article class="om-product">
+              <div class="om-product__badge om-product__badge--leaf" aria-hidden="true">🍃</div>
+              <h3 class="om-product__t">Eco Blend</h3>
+              <p class="om-product__b">Valvoline · Restore &amp; Protect</p>
+              <p class="om-product__price">$36.00 <span class="om-stars">★ 4.6</span></p>
+              <ul class="om-product__feats">
+                <li>Reduced emissions formula</li>
+                <li>Deposit control</li>
+              </ul>
+              <button type="button" class="om-btn-wide om-btn-wide--ghost om-product__btn">View Details</button>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <nav class="dock" aria-label="Primary">
+        <a href="home.html"><button type="button" class="dock__btn" aria-label="Power"><img src="images/start icon.svg" alt=""></button></a>
+        <a href="car-screen.html"><button type="button" class="dock__btn" aria-label="Messages"><img src="images/carscreen icon.svg" alt=""></button></a>
+        <a href="dashboard.html"><button type="button" class="dock__btn dock__btn--active" aria-current="page" aria-label="Home">
+          <span class="dock__home"><img src="images/home icon.svg" alt=""></span>
+        </button></a>
+        <a href="insights.html"><button type="button" class="dock__btn" aria-label="Statistics"><img src="images/Vector.svg" alt=""></button></a>
+        <a href="profile.html"><button type="button" class="dock__btn dock__btn--avatar" aria-label="Profile">
+          <img src="images/me.svg" width="28" height="28" />
+        </button></a>
+      </nav>
+    </div>
+
+    <script src="i18n-ar.js"></script>
+    <script src="lang-toggle.js"></script>
+    <script src="oil-monitor.js"></script>
+    <script src="nav-animations.js"></script>
+  </body>
+</html>
