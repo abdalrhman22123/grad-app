@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vehicle Control — VW Tiguan 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vehicle-control.css" />
+  </head>
+  <body>
+    <a class="vc-skip" href="#main">Skip to content</a>
+
+    <div class="vc-page">
+      <header class="vc-header">
+        <div class="vc-header__copy">
+          <p class="vc-kicker">Ready to have a ride today?</p>
+          <h1 class="vc-title">VW Tiguan 2025</h1>
+        </div>
+        <button type="button" class="vc-iconbtn" id="vcMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="vcMenu">
+          <span class="vc-menu-3" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </header>
+
+      <div class="vc-drawer" id="vcMenu" aria-hidden="true">
+        <div class="vc-drawer__backdrop" id="vcMenuBackdrop"></div>
+        <nav class="vc-drawer__panel" aria-label="Menu">
+          <button type="button" class="vc-drawer__close" id="vcMenuClose" aria-label="Close menu">&times;</button>
+          <ul class="vc-drawer__list">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="login.html">Sign in</a></li>
+            <li><a href="monitors.html">Monitors Menu</a></li>
+            <li><a href="radio.html">Radio</a></li>
+            <li><a href="bluetooth.html">Bluetooth</a></li>
+            <li><a href="ar-history.html">AR History</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="login.html" class="menu-logout">Log out</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <main class="vc-main" id="main">
+        <section class="vc-card vc-card--hero" aria-label="Vehicle overview">
+          <div class="vc-hero__glow" aria-hidden="true"></div>
+          <div class="vc-hero__imgwrap">
+            <img class="vc-hero__img" src="images/car-Photoroom (1) 1.svg" width="640" height="360" alt="VW Tiguan 2025" />
+          </div>
+          <div class="vc-hero__stats">
+            <div>
+              <p class="vc-hero__lbl">Engine</p>
+              <p class="vc-hero__val" id="vcHeroEngine">Off</p>
+            </div>
+            <div>
+              <p class="vc-hero__lbl">Security</p>
+              <p class="vc-hero__val vc-hero__val--ok" id="vcHeroSecurity">Locked</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="vc-card" aria-labelledby="vcEngH">
+          <h2 class="vc-h2 vc-h2--accent" id="vcEngH">
+            <span class="vc-h2__ic" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4" stroke-linecap="round" />
+              </svg>
+            </span>
+            Engine Control
+          </h2>
+          <div class="vc-rowline">
+            <span>Engine Status</span>
+            <span class="vc-rowline__status">
+              <span class="vc-dot" id="vcEngDot" aria-hidden="true"></span>
+              <span id="vcEngStatusText">Off</span>
+            </span>
+          </div>
+          <button type="button" class="vc-btn-primary" id="vcStartEngine">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4" stroke-linecap="round" />
+            </svg>
+            <span id="vcStartEngineLabel">Start Engine</span>
+          </button>
+          <p class="vc-banner" role="note">
+            <span class="vc-banner__ic" aria-hidden="true">i</span>
+            Make sure the car is in Park mode before starting the engine.
+          </p>
+        </section>
+
+        <section class="vc-card" aria-labelledby="vcLockH">
+          <h2 class="vc-h2 vc-h2--accent" id="vcLockH">
+            <span class="vc-h2__ic" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="5" y="11" width="14" height="10" rx="2" />
+                <path d="M8 11V8a4 4 0 018 0v3" stroke-linecap="round" />
+              </svg>
+            </span>
+            Lock &amp; Security
+          </h2>
+          <div class="vc-lock-grid" id="vcLockGrid">
+            <div class="vc-lock-cell" data-zone="fl"><span class="vc-lock-cell__ic" aria-hidden="true">🔒</span><span>Front Left</span><span class="vc-lock-cell__st">Locked</span></div>
+            <div class="vc-lock-cell" data-zone="fr"><span class="vc-lock-cell__ic" aria-hidden="true">🔒</span><span>Front Right</span><span class="vc-lock-cell__st">Locked</span></div>
+            <div class="vc-lock-cell" data-zone="rl"><span class="vc-lock-cell__ic" aria-hidden="true">🔒</span><span>Rear Left</span><span class="vc-lock-cell__st">Locked</span></div>
+            <div class="vc-lock-cell" data-zone="rr"><span class="vc-lock-cell__ic" aria-hidden="true">🔒</span><span>Rear Right</span><span class="vc-lock-cell__st">Locked</span></div>
+            <div class="vc-lock-cell vc-lock-cell--wide" data-zone="trunk">
+              <span class="vc-lock-cell__ic" aria-hidden="true">🔒</span><span>Trunk</span><span class="vc-lock-cell__st">Locked</span>
+            </div>
+          </div>
+          <div class="vc-btnrow">
+            <button type="button" class="vc-btn-secondary vc-btn-secondary--disabled" id="vcBtnLocked" disabled aria-disabled="true">
+              ✓ Locked
+            </button>
+            <button type="button" class="vc-btn-secondary vc-btn-secondary--active" id="vcUnlockAll">
+              <span aria-hidden="true">🔓</span> Unlock All
+            </button>
+          </div>
+        </section>
+
+        <section class="vc-card" aria-labelledby="vcWinH">
+          <h2 class="vc-h2 vc-h2--accent" id="vcWinH">
+            <span class="vc-h2__ic" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <rect x="3" y="4" width="18" height="16" rx="2" />
+                <path d="M12 8v8M8 12h8" stroke-linecap="round" opacity="0.4" />
+              </svg>
+            </span>
+            Window Controls
+          </h2>
+          <div class="vc-win-grid" id="vcWinGrid">
+            <div class="vc-win-cell" data-win="fl">
+              <span class="vc-win-cell__lbl">Front Left</span>
+              <span class="vc-win-cell__pct"><span class="vc-pct-val">0</span>%</span>
+              <div class="vc-win-btns">
+                <button type="button" class="vc-sqbtn" data-delta="1" aria-label="Front left window up">▲</button>
+                <button type="button" class="vc-sqbtn" data-delta="-1" aria-label="Front left window down">▼</button>
+              </div>
+            </div>
+            <div class="vc-win-cell" data-win="fr">
+              <span class="vc-win-cell__lbl">Front Right</span>
+              <span class="vc-win-cell__pct"><span class="vc-pct-val">0</span>%</span>
+              <div class="vc-win-btns">
+                <button type="button" class="vc-sqbtn" data-delta="1" aria-label="Front right window up">▲</button>
+                <button type="button" class="vc-sqbtn" data-delta="-1" aria-label="Front right window down">▼</button>
+              </div>
+            </div>
+            <div class="vc-win-cell" data-win="rl">
+              <span class="vc-win-cell__lbl">Rear Left</span>
+              <span class="vc-win-cell__pct"><span class="vc-pct-val">0</span>%</span>
+              <div class="vc-win-btns">
+                <button type="button" class="vc-sqbtn" data-delta="1" aria-label="Rear left window up">▲</button>
+                <button type="button" class="vc-sqbtn" data-delta="-1" aria-label="Rear left window down">▼</button>
+              </div>
+            </div>
+            <div class="vc-win-cell" data-win="rr">
+              <span class="vc-win-cell__lbl">Rear Right</span>
+              <span class="vc-win-cell__pct"><span class="vc-pct-val">0</span>%</span>
+              <div class="vc-win-btns">
+                <button type="button" class="vc-sqbtn" data-delta="1" aria-label="Rear right window up">▲</button>
+                <button type="button" class="vc-sqbtn" data-delta="-1" aria-label="Rear right window down">▼</button>
+              </div>
+            </div>
+          </div>
+          <div class="vc-btnrow">
+            <button type="button" class="vc-btn-secondary vc-btn-secondary--disabled" id="vcCloseAllWin" disabled>Close All</button>
+            <button type="button" class="vc-btn-secondary vc-btn-secondary--active" id="vcOpenAllWin">Open All</button>
+          </div>
+        </section>
+
+        <section class="vc-card" aria-labelledby="vcDoorH">
+          <h2 class="vc-h2 vc-h2--accent" id="vcDoorH">
+            <span class="vc-h2__ic" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M6 20V6l6-2v16" stroke-linejoin="round" />
+                <path d="M9 10h3" stroke-linecap="round" />
+              </svg>
+            </span>
+            Door Status
+          </h2>
+          <div class="vc-door-grid">
+            <div class="vc-door-cell"><span class="vc-door-cell__ic" aria-hidden="true">🚪</span><span>Front Left</span><span class="vc-door-cell__st">Closed</span></div>
+            <div class="vc-door-cell"><span class="vc-door-cell__ic" aria-hidden="true">🚪</span><span>Front Right</span><span class="vc-door-cell__st">Closed</span></div>
+            <div class="vc-door-cell"><span class="vc-door-cell__ic" aria-hidden="true">🚪</span><span>Rear Left</span><span class="vc-door-cell__st">Closed</span></div>
+            <div class="vc-door-cell"><span class="vc-door-cell__ic" aria-hidden="true">🚪</span><span>Rear Right</span><span class="vc-door-cell__st">Closed</span></div>
+            <div class="vc-door-cell vc-door-cell--wide"><span class="vc-door-cell__ic" aria-hidden="true">📦</span><span>Trunk</span><span class="vc-door-cell__st">Closed</span></div>
+          </div>
+          <div class="vc-door-footer">
+            <span>All Doors Status</span>
+            <span class="vc-door-footer__ok" id="vcAllDoorsStatus">All Closed</span>
+          </div>
+        </section>
+      </main>
+
+      <nav class="dock" aria-label="Primary">
+        <a href="home.html"><button type="button" class="dock__btn" aria-label="Power"><img src="images/start icon.svg" alt=""></button></a>
+        <a href="car-screen.html"><button type="button" class="dock__btn" aria-label="Messages"><img src="images/carscreen icon.svg" alt=""></button></a>
+        <a href="dashboard.html"><button type="button" class="dock__btn dock__btn--active" aria-current="page" aria-label="Home">
+          <span class="dock__home"><img src="images/home icon.svg" alt=""></span>
+        </button></a>
+        <a href="insights.html"><button type="button" class="dock__btn" aria-label="Statistics"><img src="images/Vector.svg" alt=""></button></a>
+        <a href="profile.html"><button type="button" class="dock__btn dock__btn--avatar" aria-label="Profile">
+          <img src="images/me.svg" width="28" height="28" />
+        </button></a>
+      </nav>
+    </div>
+
+    <script src="i18n-ar.js"></script>
+    <script src="lang-toggle.js"></script>
+    <script src="vehicle-control.js"></script>
+    <script src="nav-animations.js"></script>
+  </body>
+</html>

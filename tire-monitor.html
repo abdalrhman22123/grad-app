@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tire Monitor — VW Tiguan 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="tire-monitor.css" />
+  </head>
+  <body>
+    <a class="tm-skip" href="#main">Skip to content</a>
+
+    <div class="tm-page">
+      <header class="tm-header">
+        <div class="tm-header__copy">
+          <p class="tm-kicker">Ready to have a ride today?</p>
+          <h1 class="tm-title">VW Tiguan 2025</h1>
+        </div>
+        <button type="button" class="tm-iconbtn" id="tmMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="tmMenu">
+          <span class="tm-menu-3" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </header>
+
+      <div class="tm-drawer" id="tmMenu" aria-hidden="true">
+        <div class="tm-drawer__backdrop" id="tmMenuBackdrop"></div>
+        <nav class="tm-drawer__panel" aria-label="Menu">
+          <button type="button" class="tm-drawer__close" id="tmMenuClose" aria-label="Close menu">&times;</button>
+          <ul class="tm-drawer__list">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="login.html">Sign in</a></li>
+            <li><a href="monitors.html">Monitors Menu</a></li>
+            <li><a href="radio.html">Radio</a></li>
+            <li><a href="bluetooth.html">Bluetooth</a></li>
+            <li><a href="ar-history.html">AR History</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="login.html" class="menu-logout">Log out</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <main class="tm-main" id="main">
+        <section class="tm-card tm-card--status" aria-labelledby="tmSysH">
+          <div class="tm-status-head">
+            <h2 class="tm-h2 tm-h2--nom" id="tmSysH">Tire Health</h2>
+            <span class="tm-pill-ok">Stable</span>
+          </div>
+          <p class="tm-health-big">96%</p>
+          <p class="tm-health-sub">No immediate action required</p>
+          <div class="tm-health-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="96">
+            <span class="tm-health-bar__fill" style="width: 96%"></span>
+          </div>
+          <div class="tm-health-ticks"><span>Critical</span><span>Good</span><span>Optimal</span></div>
+        </section>
+
+        <section class="tm-card" aria-labelledby="tmLiveH">
+          <div class="tm-sec-head">
+            <h2 class="tm-h2 tm-h2--nom" id="tmLiveH">Live Tire Pressure</h2>
+            <span class="tm-live"><span class="tm-live__dot" aria-hidden="true"></span>Live</span>
+          </div>
+          <div class="tm-tires-grid" id="tmTiresGrid">
+            <article class="tm-tire" data-tire="fl">
+              <p class="tm-tire__pos">Front Left</p>
+              <p class="tm-tire__psi"><span class="tm-tire__val">34</span> PSI</p>
+              <p class="tm-tire__tmp">86°F</p>
+              <p class="tm-tire__state tm-tire__state--ok">Normal</p>
+            </article>
+            <article class="tm-tire" data-tire="fr">
+              <p class="tm-tire__pos">Front Right</p>
+              <p class="tm-tire__psi"><span class="tm-tire__val">33</span> PSI</p>
+              <p class="tm-tire__tmp">88°F</p>
+              <p class="tm-tire__state tm-tire__state--warn">Low</p>
+            </article>
+            <article class="tm-tire" data-tire="rl">
+              <p class="tm-tire__pos">Rear Left</p>
+              <p class="tm-tire__psi"><span class="tm-tire__val">35</span> PSI</p>
+              <p class="tm-tire__tmp">84°F</p>
+              <p class="tm-tire__state tm-tire__state--ok">Normal</p>
+            </article>
+            <article class="tm-tire" data-tire="rr">
+              <p class="tm-tire__pos">Rear Right</p>
+              <p class="tm-tire__psi"><span class="tm-tire__val">34</span> PSI</p>
+              <p class="tm-tire__tmp">85°F</p>
+              <p class="tm-tire__state tm-tire__state--ok">Normal</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="tm-card" aria-labelledby="tmRecommendH">
+          <h2 class="tm-h2" id="tmRecommendH">Recommended Actions</h2>
+          <ul class="tm-actions">
+            <li>
+              <span class="tm-actions__ic" aria-hidden="true">⚠</span>
+              <div>
+                <p class="tm-actions__t">Inflate Front Right Tire</p>
+                <p class="tm-actions__d">Current 33 PSI · Suggested 35 PSI</p>
+              </div>
+              <button type="button" class="tm-tagbtn" id="tmSetReminder">Remind</button>
+            </li>
+            <li>
+              <span class="tm-actions__ic tm-actions__ic--ok" aria-hidden="true">✓</span>
+              <div>
+                <p class="tm-actions__t">Rotation Due in 1,250 miles</p>
+                <p class="tm-actions__d">Based on your current usage pattern</p>
+              </div>
+              <button type="button" class="tm-tagbtn tm-tagbtn--ghost" id="tmScheduleRotation">Schedule</button>
+            </li>
+          </ul>
+        </section>
+
+        <section class="tm-card" aria-labelledby="tmTreadH">
+          <h2 class="tm-h2" id="tmTreadH">Tread Depth</h2>
+          <div class="tm-tread-list">
+            <div class="tm-tread-row">
+              <span>Front Left</span>
+              <span>6.2 mm</span>
+              <div class="tm-line"><span style="width: 78%"></span></div>
+            </div>
+            <div class="tm-tread-row">
+              <span>Front Right</span>
+              <span>5.8 mm</span>
+              <div class="tm-line"><span style="width: 72%"></span></div>
+            </div>
+            <div class="tm-tread-row">
+              <span>Rear Left</span>
+              <span>6.5 mm</span>
+              <div class="tm-line"><span style="width: 81%"></span></div>
+            </div>
+            <div class="tm-tread-row">
+              <span>Rear Right</span>
+              <span>6.4 mm</span>
+              <div class="tm-line"><span style="width: 80%"></span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="tm-card" aria-labelledby="tmModeH">
+          <div class="tm-sec-head">
+            <h2 class="tm-h2 tm-h2--nom" id="tmModeH">Pressure Mode</h2>
+            <span class="tm-meta">Auto-adjust alerts</span>
+          </div>
+          <div class="tm-mode-grid" role="radiogroup" aria-label="Driving mode">
+            <button type="button" class="tm-mode is-active" role="radio" aria-checked="true" data-mode="city">
+              <span class="tm-mode__t">City</span>
+              <span class="tm-mode__d">Balanced comfort</span>
+            </button>
+            <button type="button" class="tm-mode" role="radio" aria-checked="false" data-mode="highway">
+              <span class="tm-mode__t">Highway</span>
+              <span class="tm-mode__d">Higher stability</span>
+            </button>
+            <button type="button" class="tm-mode" role="radio" aria-checked="false" data-mode="offroad">
+              <span class="tm-mode__t">Off-road</span>
+              <span class="tm-mode__d">Adaptive traction</span>
+            </button>
+          </div>
+          <button type="button" class="tm-btn-wide" id="tmRecalibrate">Recalibrate TPMS</button>
+        </section>
+      </main>
+
+      <nav class="dock" aria-label="Primary">
+        <a href="home.html"><button type="button" class="dock__btn" aria-label="Power"><img src="images/start icon.svg" alt=""></button></a>
+        <a href="car-screen.html"><button type="button" class="dock__btn" aria-label="Messages"><img src="images/carscreen icon.svg" alt=""></button></a>
+        <a href="dashboard.html"><button type="button" class="dock__btn dock__btn--active" aria-current="page" aria-label="Home">
+          <span class="dock__home"><img src="images/home icon.svg" alt=""></span>
+        </button></a>
+        <a href="insights.html"><button type="button" class="dock__btn" aria-label="Statistics"><img src="images/Vector.svg" alt=""></button></a>
+        <a href="profile.html"><button type="button" class="dock__btn dock__btn--avatar" aria-label="Profile">
+          <img src="images/me.svg" width="28" height="28" />
+        </button></a>
+      </nav>
+    </div>
+
+    <script src="i18n-ar.js"></script>
+    <script src="lang-toggle.js"></script>
+    <script src="tire-monitor.js"></script>
+    <script src="nav-animations.js"></script>
+  </body>
+</html>
