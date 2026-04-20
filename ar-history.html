@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AR Car History — OTOVISION</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="ar-history.css" />
+  </head>
+  <body>
+    <a class="arh-skip" href="#main">Skip to content</a>
+
+    <div class="arh-page">
+      <header class="arh-header">
+        <a href="dashboard.html" class="arh-back" aria-label="Back">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+        <h1 class="arh-title">AR Car History</h1>
+        <button type="button" class="arh-iconbtn" id="arhMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="arhMenu">
+          <span class="arh-menu-3" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </header>
+
+      <div class="arh-drawer" id="arhMenu" aria-hidden="true">
+        <div class="arh-drawer__backdrop" id="arhMenuBackdrop"></div>
+        <nav class="arh-drawer__panel" aria-label="Menu">
+          <button type="button" class="arh-drawer__close" id="arhMenuClose" aria-label="Close menu">&times;</button>
+          <ul class="arh-drawer__list">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="login.html">Sign in</a></li>
+            <li><a href="monitors.html">Monitors Menu</a></li>
+            <li><a href="radio.html">Radio</a></li>
+            <li><a href="bluetooth.html">Bluetooth</a></li>
+            <li><a href="ar-history.html">AR History</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="login.html" class="menu-logout">Log out</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <main class="arh-main" id="main">
+        <section class="arh-card arh-card--sync" aria-labelledby="arhSyncH">
+          <div class="arh-sync-head">
+            <h2 class="arh-h2 arh-h2--nom" id="arhSyncH">AR Sync Status</h2>
+            <span class="arh-chip arh-chip--ok"><span class="arh-dot" aria-hidden="true"></span>Connected</span>
+          </div>
+          <p class="arh-sync-sub">AR is connected to your car screen and mobile app.</p>
+          <div class="arh-sync-grid">
+            <div class="arh-sync-item">
+              <span class="arh-sync-item__l">Car Screen</span>
+              <span class="arh-sync-item__v">Online</span>
+            </div>
+            <div class="arh-sync-item">
+              <span class="arh-sync-item__l">Mobile App</span>
+              <span class="arh-sync-item__v">Online</span>
+            </div>
+            <div class="arh-sync-item">
+              <span class="arh-sync-item__l">Last Sync</span>
+              <span class="arh-sync-item__v" id="arhLastSync">2 mins ago</span>
+            </div>
+            <div class="arh-sync-item">
+              <span class="arh-sync-item__l">Events Stored</span>
+              <span class="arh-sync-item__v">126</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="arh-card" aria-labelledby="arhFiltersH">
+          <div class="arh-filters-head">
+            <h2 class="arh-h2 arh-h2--nom" id="arhFiltersH">History Filters</h2>
+            <button type="button" class="arh-soft-btn" id="arhRefreshBtn">Refresh</button>
+          </div>
+          <div class="arh-seg" role="tablist" aria-label="History type">
+            <button type="button" class="arh-seg__btn is-active" role="tab" aria-selected="true" aria-controls="arhWarningsPanel" id="arhWarningsTab">Warnings</button>
+            <button type="button" class="arh-seg__btn" role="tab" aria-selected="false" aria-controls="arhAccidentsPanel" id="arhAccidentsTab">Accidents</button>
+            <button type="button" class="arh-seg__btn" role="tab" aria-selected="false" aria-controls="arhAllPanel" id="arhAllTab">All</button>
+          </div>
+          <div class="arh-select-row">
+            <label class="arh-label" for="arhRange">Date Range</label>
+            <select id="arhRange" class="arh-select">
+              <option value="7d">Last 7 days</option>
+              <option value="30d" selected>Last 30 days</option>
+              <option value="90d">Last 90 days</option>
+              <option value="1y">Last year</option>
+            </select>
+          </div>
+        </section>
+
+        <section class="arh-card" id="arhWarningsPanel" role="tabpanel" aria-labelledby="arhWarningsTab">
+          <h2 class="arh-h2">Warning History</h2>
+          <ul class="arh-list">
+            <li class="arh-item">
+              <span class="arh-item__icon arh-item__icon--warn" aria-hidden="true">⚠</span>
+              <div class="arh-item__body">
+                <p class="arh-item__t">Low Tire Pressure Detected</p>
+                <p class="arh-item__d">Front Right dropped to 31 PSI while driving.</p>
+                <p class="arh-item__m">Today, 09:14 AM · Cairo Ring Road</p>
+              </div>
+              <span class="arh-badge">Medium</span>
+            </li>
+            <li class="arh-item">
+              <span class="arh-item__icon arh-item__icon--info" aria-hidden="true">ⓘ</span>
+              <div class="arh-item__body">
+                <p class="arh-item__t">Lane Departure Warning</p>
+                <p class="arh-item__d">Vehicle crossed lane marker without turn signal.</p>
+                <p class="arh-item__m">Yesterday, 06:42 PM · 6th October</p>
+              </div>
+              <span class="arh-badge arh-badge--low">Low</span>
+            </li>
+            <li class="arh-item">
+              <span class="arh-item__icon arh-item__icon--warn" aria-hidden="true">⚠</span>
+              <div class="arh-item__body">
+                <p class="arh-item__t">Brake Temperature High</p>
+                <p class="arh-item__d">Front brakes exceeded thermal threshold.</p>
+                <p class="arh-item__m">Apr 16, 02:18 PM · Nasr City</p>
+              </div>
+              <span class="arh-badge">Medium</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="arh-card" id="arhAccidentsPanel" role="tabpanel" aria-labelledby="arhAccidentsTab" hidden>
+          <h2 class="arh-h2">Accident History</h2>
+          <ul class="arh-list">
+            <li class="arh-item">
+              <span class="arh-item__icon arh-item__icon--danger" aria-hidden="true">✖</span>
+              <div class="arh-item__body">
+                <p class="arh-item__t">Minor Rear Impact</p>
+                <p class="arh-item__d">Low-speed collision while stopped at traffic light.</p>
+                <p class="arh-item__m">Mar 28, 08:03 PM · Heliopolis</p>
+              </div>
+              <span class="arh-badge arh-badge--high">High</span>
+            </li>
+            <li class="arh-item">
+              <span class="arh-item__icon arh-item__icon--danger" aria-hidden="true">✖</span>
+              <div class="arh-item__body">
+                <p class="arh-item__t">Parking Lot Side Scratch</p>
+                <p class="arh-item__d">Detected from proximity and body-panel sensor logs.</p>
+                <p class="arh-item__m">Jan 11, 05:37 PM · Mall of Arabia</p>
+              </div>
+              <span class="arh-badge arh-badge--low">Low</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="arh-card" id="arhAllPanel" role="tabpanel" aria-labelledby="arhAllTab" hidden>
+          <h2 class="arh-h2">All Events Summary</h2>
+          <div class="arh-summary-grid">
+            <article class="arh-summary">
+              <p class="arh-summary__n">98</p>
+              <p class="arh-summary__l">Warnings</p>
+            </article>
+            <article class="arh-summary">
+              <p class="arh-summary__n">8</p>
+              <p class="arh-summary__l">Critical Alerts</p>
+            </article>
+            <article class="arh-summary">
+              <p class="arh-summary__n">4</p>
+              <p class="arh-summary__l">Accidents</p>
+            </article>
+            <article class="arh-summary">
+              <p class="arh-summary__n">16</p>
+              <p class="arh-summary__l">Resolved Cases</p>
+            </article>
+          </div>
+          <button type="button" class="arh-btn-wide" id="arhExportBtn">Export Full History</button>
+        </section>
+      </main>
+
+      <nav class="dock" aria-label="Primary">
+        <a href="home.html"><button type="button" class="dock__btn" aria-label="Power"><img src="images/start icon.svg" alt=""></button></a>
+        <a href="car-screen.html"><button type="button" class="dock__btn" aria-label="Messages"><img src="images/carscreen icon.svg" alt=""></button></a>
+        <a href="dashboard.html"><button type="button" class="dock__btn dock__btn--active" aria-current="page" aria-label="Home">
+          <span class="dock__home"><img src="images/home icon.svg" alt=""></span>
+        </button></a>
+        <a href="insights.html"><button type="button" class="dock__btn" aria-label="Statistics"><img src="images/Vector.svg" alt=""></button></a>
+        <a href="profile.html"><button type="button" class="dock__btn dock__btn--avatar" aria-label="Profile">
+          <img src="images/me.svg" width="28" height="28" />
+        </button></a>
+      </nav>
+    </div>
+
+    <script src="i18n-ar.js"></script>
+    <script src="lang-toggle.js"></script>
+    <script src="ar-history.js"></script>
+    <script src="nav-animations.js"></script>
+  </body>
+</html>
